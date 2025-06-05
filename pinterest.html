@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project of Pinterest</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      .image-container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+      }
+
+      .image-container img {
+        position: absolute;
+        border-radius: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .img1 {
+        top: 0;
+        left: 0;
+        width: 200px;
+      }
+
+      .img2 {
+        top: 0;
+        right: 0;
+        width: 150px;
+      }
+
+      .img3 {
+        bottom: 0;
+        left: 0;
+        width: 180px;
+      }
+
+      .img4 {
+        bottom: 0;
+        right: 0;
+        width: 200px;
+      }
+
+      .center-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+        border-radius: 30px;
+        z-index: 10;
+      }
+
+      .search-bar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 20;
+      }
+
+      .search-bar img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .mybackround-div-five {
+        top: 20%;
+        background-image: url(https://i5.walmartimages.com/asr/539726ef-023b-46cb-84e0-1ac8ef318c91.090ec36dbed55944266e89dd6271a5e2.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        pointer-events: none;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+      }
+      /* form {
+        width: 100%;
+        height: auto;
+        padding: 0 5px;
+      }
+      @media (max-width: 768px) {
+        form {
+          width: 200px;
+          padding: 0 15px;
+        }
+      } */
+
+      /* footer */
+      footer {
+        font-size: 10px;
+        color: lightblue !important;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* icone animation translateY */
+      .bi-chevron-down {
+        font-size: 50px;
+        color: white;
+        font-weight: bolder;
+      }
+      .bi-chevron-down-animated {
+        font-size: 50px;
+        animation: jump 1s linear alternate infinite;
+      }
+
+      @keyframes jump {
+        0% {
+          transform: translateY(0px);
+        }
+        100% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* image cadrage */
+
+      .carousel-item img {
+        height: auto;
+        max-height: 200px;
+      }
+      .carousel [data-bs-target] {
+        background-color: gray;
+        height: 10px;
+        width: 10px;
+        border: none;
+        display: inline-block;
+        padding: 0;
+        border-radius: 50%;
+        transition: background-color 0.5s;
+      }
+      .carousel button:nth-child(1).active {
+        background-color: chocolate;
+      }
+      .carousel button:nth-child(2).active {
+        background-color: green;
+      }
+      .carousel button:nth-child(3).active {
+        background-color: blue;
+      }
+
+      #customCarousel h1 {
+        font-weight: bolder;
+        transition: all 0.5s linear;
+      }
+
+      /* image mediaquery div search bar */
+      .main-img-container {
+        width: 500px;
+        height: 500px;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      .overlay-title {
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        left: 50px;
+        bottom: 80px;
+      }
+
+      .img-card {
+        width: 220px;
+        border-radius: 40px;
+        overflow: hidden;
+      }
+
+      .img-card h1 {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        font-size: 18px;
+        color: #333;
+      }
+
+      @media (max-width: 768px) {
+        .img-card,
+        .main-img-container {
+          width: 100% !important;
+          height: auto !important;
+          position: relative !important;
+        }
+
+        .overlay-title {
+          font-size: 24px;
+          left: 10px;
+          bottom: 10px;
+        }
+
+        .img-card h1 {
+          font-size: 14px;
+        }
+      }
+
+      /* <!--  FLOTTANT GLOBAL -- >  */
+
+      .menu-flottant {
+        position: fixed;
+        top: 50px;
+        bottom: 20px;
+        padding: 10px;
+        left: 0px;
+        z-index: 9999;
+        border-radius: 5px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .menu-btn {
+        background-color: #212529;
+        color: #ffc107;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 12px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 5px;
+        background-color: #343a40;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .menu-links a {
+        color: #ffc107;
+        text-decoration: none;
+        margin: 5px 0;
+        font-weight: bold;
+      }
+
+      .menu-flottant:hover .menu-links {
+        display: flex;
+      }
+      .menu-flottant a:hover {
+        text-decoration: underline;
+        color: blue;
+        background-color: rgba(246, 242, 239, 0.402);
+        border-radius: 10px;
+        transform: scale(1.1);
+        width: 80px;
+        text-align: center;
+      }
+
+      form p,
+      a {
+        font-size: 14px;
+        padding: 0;
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Menu global fixe à gauche -->
+    <!-- <div
+      class="position-fixed top-0 start-0 bg-dark text-center p-2"
+      style="width: 60px; height: 100vh; z-index: 1050"
+    >
+      <a href="index.html" class="d-block text-warning mb-4">🏠</a>
+      <a href="pinterest.html" class="d-block text-warning mb-4">📌</a>
+      <a href="asana.html" class="d-block text-warning mb-4">📝</a>
+    </div> -->
+    <!-- 
+    <!-- ma nav bar des pages -->
+    <div class="menu-flottant">
+      <button class="menu-btn">☰ Menu</button>
+      <div class="menu-links">
+        <a href="index.html">Netflix</a>
+        <a href="asana.html">Asana</a>
+        <a href="pinterest.html">Pinterest</a>
+        <a href="airbnb.html">Airbnb</a>
+      </div>
+    </div>
+
+    <!-- NAVBAR de pinterest -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg fixed-top">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <img src="pinterest.png" alt="Pinterest logo" style="height: 40px" />
+      </a>
+
+      <!--  BOUTON BURGER MOBILE -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- ✅ CONTENU COLLAPSABLE -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Liens à gauche -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold" href="#">Explore</a>
+          </li>
+        </ul>
+
+        <!-- Liens à droite -->
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link fw-bold px-2" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold px-2" href="#">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold px-2" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold border-end border-1 px-2" href="#"
+              >Blog</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="btn btn-danger fw-bold text-white rounded-pill px-3 ms-3"
+              href="#"
+              >Log in</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary fw-bold rounded-pill px-3 ms-2" href="#"
+              >Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SECTION FORMULAIRE AVEC COUVERTURE -->
+
+    <div
+      class="container-fluid px-md-5 mybackround-div-five"
+      style="margin-top: 70px"
+    >
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <h1
+            class="text-white fw-bold"
+            style="font-size: 60px; line-height: 1.5; text-align: center"
+          >
+            Sign up to get <br />
+            your ideas
+          </h1>
+        </div>
+
+        <!-- formulaire -->
+
+        <div class="col-12 col-md-6 d-flex justify-content-end">
+          <form
+            class="shadow-lg bg-white rounded-5 px-md-5 mb-md-5 mx-auto me-md-3 pt-md-0" style="width: 400px;"
+          >
+            <div class="text-center mb-2">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png?20160129083321"
+                width="50"
+                height="50"
+                alt="logo"
+              />
+              <h3>Welcome to Pinterest</h3>
+              <p>Find new ideas to try</p>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-2">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control rounded-2 p-2"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+
+            <!-- Password -->
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group position-relative">
+              <input
+                type="password"
+                class="form-control rounded-2 p-2 pe-5"
+                id="password"
+                placeholder="Create a password"
+                required
+                minlength="6"
+                pattern="^(?=.*\d)(?=.*[a-zA-Z]).{6,}$"
+              />
+              <button
+                class="bg-white position-absolute top-50 end-0 translate-middle-y me-3 border-0"
+                type="button"
+                id="togglePassword"
+                aria-label="Toggle password visibility"
+                style="z-index: 10"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+            <p class="text-muted">
+              <a href="#" class="text-decoration-none text-primary">
+                Forgot your password?
+              </a>
+            </p>
+
+            <!-- Birthdate -->
+            <div class="mb-2">
+              <label for="dob" class="form-label">Birthdate</label>
+              <input
+                type="date"
+                class="form-control rounded-2 p-2"
+                id="dob"
+                required
+              />
+            </div>
+
+            <!-- Log in button -->
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-danger rounded-3 p-2">
+                Log in
+              </button>
+            </div>
+
+            <p class="text-center">or</p>
+
+            <!-- Continue with Facebook -->
+            <div
+              class="d-flex justifiy-content-center align-items-center text-center"
+            >
+              <button type="button" class="btn btn-primary rounded-3 w-100 p-2">
+                <i class="bi bi-facebook me-2"></i> Continue with Facebook
+              </button>
+            </div>
+
+            <!-- Continue with Google -->
+            <div
+              class="d-flex justify-content-center align-items-center text-center pt-2"
+            >
+              <button
+                type="button"
+                class="btn btn-light border btn-outline-dark w-100 rounded-3 p-2"
+              >
+                <i class="fab fa-google text-danger me-2"></i>
+                Continue with Google
+              </button>
+            </div>
+
+            <!-- Terms and policies -->
+            <p class="text-muted small text-center">
+              By continuing, you agree to Pinterest’s
+              <a href="#" class="text-decoration-underline">
+                Terms of Service and acknowledge you’ve read our
+              </a>
+
+              <a href="#" class="text-decoration-underline"> Privacy Policy </a
+              >,
+              <a href="#" class="text-decoration-underline">
+                Notice at collection </a
+              >.
+            </p>
+
+            <p class="fw-bold text-muted text-center">
+              Not on Pinterest yet?
+              <a href="#" class="text-muted text-decoration-none text-center">
+                Sign up
+              </a>
+            </p>
+
+            <p class="fw-bold text-muted text-center">
+              Are you a Business?
+              <a href="#" class="fw-bold text-muted text-decoration-none">
+                Get started here
+              </a>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- icone en jumping -->
+      <div
+        class="bi-chevron-down-animated text-center col-sm-hidden position-absolute"
+        style="bottom: -20%;left: 50%;"
+      >
+        <i class="bi bi-chevron-down text-white fs-5"></i>
+      </div>
+    </div>
+
+    <!-- Contenu des diapositives -->
+    <div
+      id="customCarousel"
+      class="carousel slide carousel-fade mt-5"
+      data-bs-ride="carousel"
+      data-bs-interval="4000"
+    >
+      <h1 style="font-size: 50px; font-weight: bolder; text-align: center">
+        Get your next
+      </h1>
+      <div class="carousel-inner">
+        <!-- Diapositive 1 -->
+        <div class="carousel-item active">
+          <div class="text-center mt-4">
+            <h1 class="fw-bold" style="color: blue">Green Thumb Idea</h1>
+          </div>
+          <!-- Indicateurs -->
+          <div class="d-flex justify-content-center my-3">
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="0"
+              class="active btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="1"
+              class="btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="2"
+              class="btn me-2"
+            ></button>
+          </div>
+
+          <div class="d-flex flex-nowrap justify-content-center flex-wrap mb-5">
+            <img
+              src="image7.jpg"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 1"
+            />
+            <img
+              src="image1.jpeg"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 2"
+            />
+            <img
+              src="https://www.watchmojo.com/uploads/thumbs720/MM-Film-10-Male-Actors-Who-Were-Told-They-Werent-Attractive-Enough-for-Hollywood_A4J3M0-f.jpg"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 3"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRR7jubnJIQGSTBcVswjhQaoaKYiTqYyOYw&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 4"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPiuoSDxBlWpAdw9kvfSTmbW8fLBgSRPZaw&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 5"
+            />
+          </div>
+        </div>
+
+        <!-- Diapositive 2 -->
+        <div class="carousel-item">
+          <div class="text-center mt-4">
+            <h1 class="fw-bold text-sucess">Weeknight Dinner Idea</h1>
+          </div>
+          <div class="d-flex justify-content-center my-3">
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="0"
+              class="btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="1"
+              class="active btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="2"
+              class="btn me-2"
+            ></button>
+          </div>
+
+          <div class="d-flex flex-nowrap justify-content-center flex-wrap mb-5">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT__tJfrchGVM5cqxKuDDng-ZSUGpVdNIz2ew&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 3"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_I244wkSB8X7OjPzPEkI6kQeJvBYbb0Se-g&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 4"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfNeXIyHJz2K6rK8CHK2O-tK4L_3Izqk9rYA&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 4"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZxzh9XdqEA9PnmsAZzTnB-P_sgy4p4MdjQ&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 4"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcNephJ3cgRi7N9fvgX15IfdmIs2Jzqf8S0g&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 4"
+            />
+          </div>
+        </div>
+
+        <!-- Diapositive 3 -->
+        <div class="carousel-item">
+          <div class="text-center mt-4">
+            <h1 style="color: hotpink">More Home Decor Ideas</h1>
+          </div>
+          <div class="d-flex justify-content-center my-3">
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="0"
+              class="btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="1"
+              class="btn me-2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#customCarousel"
+              data-bs-slide-to="2"
+              class="active btn btn-primary me-2"
+            ></button>
+          </div>
+
+          <div class="d-flex flex-nowrap justify-content-center flex-wrap mb-5">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJCIoQlLoEtgHjSJTChh5Fdii4DFtabrkgsg&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 5"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVBhyAcA7ccpmb5-YorbkdEj5FvElnDRRVQ&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 6"
+            />
+
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3VqRL8edJndA-MP5yt0C4hwFkLa98I59YhA&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 5"
+            />
+
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTCNishv9No4w98X5rtVtYYFXPiFXLP3GNoA&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 6"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH7PI6ICSqFmPAnU_AzuDUz8pcOa0d8fgd3A&s"
+              class="img-thumbnail m-2"
+              width="200"
+              height="200"
+              alt="Image 6"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search section -->
+
+    <div
+      class="container-fluid py-5"
+      style="background-color: rgba(9, 212, 248, 0.171)"
+    >
+      <!-- save your idea part -->
+
+      <div class="row align-items-center justify-content-between">
+        <!-- Texte -->
+        <div class="col-12 col-md-6 text-center py-3">
+          <h1 class="fw-bold text-success" style="font-size: 50px">
+            Save ideas you like
+          </h1>
+          <p class="fs-5 text-success">
+            Collect your favorites so you can <br />
+            get back to them later.
+          </p>
+          <button class="btn btn-danger rounded-5 mt-3">Explore</button>
+        </div>
+
+        <!-- Images -->
+        <div class="col-12 col-md-6 position-relative" style="height: 600px">
+          <!-- Main Image -->
+          <div class="position-absolute" style="top: 0; left: 0">
+            <div class="main-img-container position-relative">
+              <img
+                src="https://cdn.hellowatt.fr/media/uploads/zinnia/2021/03/08/garanties-assurance-habitation-maison-1.jpg"
+                class="img-fluid w-100 h-100"
+                alt="Main image"
+              />
+              <h1 class="overlay-title">Fern future home vibes</h1>
+            </div>
+          </div>
+
+          <!-- Secondary Images (visible only on md and up) -->
+          <div class="d-none d-md-block">
+            <!-- Image 1 -->
+            <div class="position-absolute" style="top: 30%; left: 65%">
+              <div class="position-relative img-card">
+                <img
+                  src="https://www.each-a-cup.com/wp-content/uploads/2024/02/4.-Grape-Red-Tea.jpg"
+                  class="img-fluid"
+                  alt="Drinks"
+                />
+                <h1>Serve my drinks in style</h1>
+              </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="position-absolute" style="top: 0; left: 75%">
+              <div class="position-relative img-card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDKhSWGAQrXbn8LoLpHTcmDlxvYzm6R48iMA&s"
+                  class="img-fluid"
+                  alt="Bedroom"
+                />
+                <h1>My Scandinavian bedroom</h1>
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="position-absolute" style="top: 60%; left: 70%">
+              <div class="position-relative img-card">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgd1dHzdDUT1GSxZBLKJp9LZJKQ3NGKiNXRw&s"
+                  class="img-fluid"
+                  alt="Deck"
+                />
+                <h1>The deck of my dreams</h1>
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="position-absolute" style="bottom: 0; left: 70%">
+              <div class="position-relative img-card">
+                <img
+                  src="https://images.adsttc.com/media/images/63e3/52b1/42a2/a83f/89d7/130e/newsletter/ad-classics-unite-d-habitation-le-corbusier_42.jpg?1675842241"
+                  class="img-fluid"
+                  alt="Bathroom"
+                />
+                <h1>Our bathroom upgrade</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- search bar section -->
+    <div class="container-fluid" style="background-color: #f7d05bf6">
+      <div
+        class="row d-flex justify-content-between align-items-center py-5 container-fluid"
+      >
+        <div class="col-12 col-md-6 position-relative">
+          <!-- Main Image -->
+          <div
+            class="position-relative mx-auto"
+            style="left: 30%; top: 10px; bottom: 10px; z-index: 1"
+          >
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStu0VQ1oxOfEZxj45nZ1gtg-e7U5I7kV9evg&s"
+              class="img-fruid rounded-5"
+              alt="Main image rounded-5"
+              style="width: 300px; height: 350px"
+            />
+          </div>
+
+          <!-- Secondary Images (visible only on md and up) -->
+          <div class="d-none d-md-block">
+            <!-- Image 1 -->
+            <div
+              class="position-absolute"
+              style="top: 45%; left: 30%; z-index: 1050"
+            >
+              <img
+                src="images/pinterest/loop_pinterest.png"
+                class="img-fluid w-50 rounded-5"
+                alt="Drinks"
+              />
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="position-absolute" style="top: 20%; left: 10%">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg2Amg9EhrnymK4fwsGWASO0o3tHAVGn26Mg&s"
+              class="img-fluid rounded-5"
+              alt="Bedroom"
+            />
+          </div>
+
+          <!-- Image 3 -->
+          <div class="position-absolute" style="left: 60%; bottom: 70%">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBuZFGo6MTtlTiLqTlwsaXXiECZaZnefNmtA&s"
+              class="img-fluid rounded-5"
+              alt="Deck"
+            />
+          </div>
+
+          <!-- Image 4 -->
+          <div class="position-absolute" style="top: 80%; left: 70%">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVOcozu9YFcbyDGOq-4-qEnHlDR2kIC4bmow&s"
+              class="img-fluid rounded-5"
+              alt="Bathroom"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 text-center">
+          <h1 class="fw-bold" style="font-size: 50px; color: #e60023">
+            Search for an idea
+          </h1>
+          <p class="fs-5 text-success text-justify">
+            What do you want to try next? Think <br />of something you’re
+            into—like “easy <br />
+            chicken dinner”—and see what you <br />find.
+          </p>
+          <button class="btn btn-danger rounded-5 mt-3">Explore</button>
+        </div>
+      </div>
+
+      <!-- pinterest couverture -->
+      <div
+        class="container-fluid py-5"
+        style="background-color: rgb(250, 202, 168); padding-bottom: 50px"
+      >
+        <div class="row align-items-center justify-content-between g-4">
+          <!-- Image -->
+          <div class="col-12 col-md-6 text-start">
+            <img
+              src="pinterest-image-couverture.png"
+              class="img-fluid w-100"
+              alt="image-whatsapp"
+              style="border-radius: 10px"
+            />
+          </div>
+
+          <!-- Texte -->
+          <div class="col-12 col-md-6 text-center">
+            <h1 style="font-size: 50px; font-weight: bolder; color: #e60023">
+              See it, make it,<br />
+              try it, do it
+            </h1>
+            <p class="fs-2" style="color: chocolate">
+              The best part of Pinterest is discovering <br />
+              ideas from people <br />
+              around the world.
+            </p>
+            <button class="btn btn-danger rounded-5 mt-3">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- div fiveth -->
+
+    <!-- Navbar footer -->
+    <footer class="mft-2 bg-white text-center fixed-bottom">
+      <nav class="d-flex flex-wrap justify-content-center gap-2 py-3">
+        <a class="nav-link text-dark small p-0" href="#">Terms of Service</a>
+        <a class="nav-link text-dark small p-0" href="#">Privacy Policy</a>
+        <a class="nav-link text-dark small p-0" href="#">Help</a>
+        <a class="nav-link text-dark small p-0" href="#">iPhone App</a>
+        <a class="nav-link text-dark small p-0" href="#">Android App</a>
+        <a class="nav-link text-dark small p-0" href="#">Users</a>
+        <a class="nav-link text-dark small p-0" href="#">Collections</a>
+        <a class="nav-link text-dark small p-0" href="#">Shopping</a>
+        <a class="nav-link text-dark small p-0" href="#">Explore</a>
+        <a class="nav-link text-dark small p-0" href="#">Shop</a>
+        <a class="nav-link text-dark small p-0" href="#">Non-User Notice</a>
+      </nav>
+    </footer>
+    <!-- final -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- javacript -->
+    <script>
+      let message;
+
+      function regexText() {
+        let BirthDate = document.getElementById("date").value;
+        let regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
+
+        if (!regex.test(BirthDate)) {
+          message =
+            "invalid input. your birthdate must be month, day, and year";
+        } else {
+          message = "";
+        }
+      }
+      document.getElementById("email").addEventListener("blur", function () {
+        let userEmail = document.getElementById("email").value;
+        let regex = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+
+        if (!regex.test(userEmail)) {
+          message = "Please enter a valid email address.";
+        } else {
+          message = "";
+        }
+      });
+
+      document.getElementById("password").addEventListener("blur", function () {
+        let password = document.getElementById("password").value;
+        let regex = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/;
+
+        if (!regex.test(password)) {
+          message = "Please enter a valid email address.";
+        } else {
+          message = "";
+        }
+      }) <
+        // Toggle password visibility
+
+        script >
+        document
+          .getElementById("togglePassword")
+          .addEventListener("click", function () {
+            const passwordInput = document.getElementById("password");
+            const icon = this.querySelector("i");
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              icon.classList.remove("fa-eye");
+              icon.classList.add("fa-eye-slash");
+            } else {
+              passwordInput.type = "password";
+              icon.classList.remove("fa-eye-slash");
+              icon.classList.add("fa-eye");
+            }
+          });
+    </script>
+  </body>
+</html>

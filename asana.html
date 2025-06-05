@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- bootsrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awsome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Boostsrap  link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+  ">
+    <title>Grille avec Défilement</title>
+    <style>
+        .navbar {
+            padding: 0rem .625rem;
+            height: auto;
+        }
+
+        .navbar-brand img {
+            height: 3.125rem;
+        }
+
+        .bi-check {
+            background-color: white;
+            color: black;
+        }
+
+        .my-image-logo {
+            width: 3.125rem;
+            height: 12.5rem;
+            object-fit: contain;
+            border: .0625rem solid black;
+            border-radius: .625rem;
+            padding: .625rem;
+
+
+        }
+
+        .image-animaation1 {
+            animation: scrollLeft 30s infinite linear;
+            border-radius: .625rem;
+
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .image-animaation2 {
+            animation: scrollRight 30s infinite linear;
+            border-radius: .625rem;
+
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+           /* <!--  FLOTTANT GLOBAL -- >  */
+
+      .menu-flottant {
+        position: fixed;
+        top: 50px;
+        bottom: 20px;
+        padding: 10px;
+        left: 0px;
+        z-index: 9999;
+        border-radius: 5px;
+        transition: width 0.3s ease-in-out;
+      }
+
+      .menu-btn {
+        background-color: #212529;
+        color: #ffc107;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 12px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 5px;
+        background-color: #343a40;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .menu-links a {
+        color: #ffc107;
+        text-decoration: none;
+        margin: 5px 0;
+        font-weight: bold;
+      }
+
+      .menu-flottant:hover .menu-links {
+        display: flex;
+      }
+      .menu-flottant a:hover {
+        text-decoration: underline;
+        color: blue;
+        background-color: rgba(246, 242, 239, 0.402);
+        border-radius: 10px;
+        transform: scale(1.1);
+        width: 80px;
+        text-align: center;
+      }
+    </style>
+</head>
+
+<body>
+      <!-- ma nav bar des pages -->
+    <div class="menu-flottant">
+      <button class="menu-btn">☰ Menu</button>
+      <div class="menu-links">
+        <a href="index.html">Netflix</a>
+        <a href="asana.html">Asana</a>
+        <a href="pinterest.html">Pinterest</a>
+        <a href="airbnb.html">Airbnb</a>
+      </div>
+    </div>
+
+
+     <!-- ma nav bar des pages -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Logo ou nom du site -->
+    <a class="navbar-brand" href="index.html">Netflix</a>
+
+    <!-- Bouton burger sur petits écrans -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenu de la navbar -->
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="pinterest.html">Pinterest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="asana.html">Asana</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <!-- navbar of asana -->
+    <nav class="navbar navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="asana.png" alt="logo" style="height: 6.25rem;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto  mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold" href="#">Products <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Solutions <i class="bi bi-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Ressources <i class="bi bi-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Pricing</a>
+                    </li>
+                </ul>
+
+                <!-- Liens à droite -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link  border-end border-1 fw-bold fs-5" href="#"><i class="bi bi-globe"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#">Contact Sales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  btn btn-dark bg-dark text-white px-5 fw-bold" href="#">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- first div -->
+
+    <div class="container-fluid mt-5" style="background-color: rgb(255, 234, 236);">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-sm-2 col-md-4 col-lg-6">
+                <h1 style="color:chocolate; font-weight: bold; font-size: 1.875rem;">Where work connects</h1>
+                <p>Connect work to goals and automate workflows with AI as your teammate.</p>
+                <div>
+                    <button class="btn border-warning rounded-5 me-3 p-3 px-5"
+                        style="background-color: chocolate; color: white;">Get Started</button>
+                    <button class="btn border-warning rounded-5 btn-outline p-3 px-5" type="button">View Demo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center align-items-center mb-5">
+            <div class="col-sm-2 col-md-4 col-lg-10 mt-5">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/hcY-2Xux2oI" class="border-danger rounded-5"
+                        title="Asana video tutorial" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Texte -->
+    <div class="container mt-5 mb-5 me-3">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-start">
+                <h3>85% of Fortune 100 <br> companies choose Asana¹</h3>
+            </div>
+            <!-- Logos -->
+            <div class="col-md-8 d-flex flex-wrap justify-content-between gap-3">
+                <img src="ama.png" alt="Amazon logo" class="company-logo img-fluid" style="max-width: 6.25rem;">
+                <img src="accentur.png" alt="Accenture logo" class="company-logo img-fluid" style="max-width: 6.25rem;">
+                <img src="johonson.png" alt="Johnson & Johnson logo" class="company-logo img-fluid"
+                    style="max-width: 6.25rem;">
+                <img src="dell.png" alt="Dell logo" class="company-logo img-fluid" style="max-width: 6.25rem;">
+                <img src="merck.png" alt="Merck logo" class="company-logo img-fluid" style="max-width: 6.25rem;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Section avec le titre -->
+    <div class="container   mt-5 mb-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col text-start">
+                <h1 class="text-dark fw-bold display-5">
+                    See how Asana connects <br> work across different <br> departments
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="container border border-secondary border-1 rounded-5 p-3">
+        <div class="row d-flex justify-content-center align-items-center gap-3">
+            <div class="col-auto">
+                <button class="btn btn-danger rounded-5 fs-5 fw-bold px-4 py-2">Company wide</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">Marketing</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">Operation wide</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">IT</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">Product</button>
+            </div>
+        </div>
+        <div class="row justify-content-between align-items-center mt-5 mb-5">
+            <div class="col text-start ms-2">
+                <img src="Asana-cognitive-load.webp" class="img-fluid" alt="image">
+            </div>
+            <div class="col col-auto">
+                <h1>Operationalize goals</h1>
+                <ul class="list-unstyled ">
+                    <li><i class="bi bi-check-circle-fill"></i> Connect work to company goals</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Automate workflows across departments</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Report on progress and address bottlenecks</li>
+                </ul>
+                <div class="col-auto">
+                    <button class="btn btn-outline-dark rounded-5 fs-5 fw-bold px-4 py-2">See how it works</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="container-fluid d-flex align-items-center justify-content-center text-center   mt-5 mb-5"
+        style="background-color: #b0e0e6;">
+        <div class="row align-items-center gap-3 mt-5 mb-5 w-100 h-100">
+            <div class="col rounded-5" style="background-color:darkblue">
+                <h1 class="text-info fw-bold">More clarity and accountability</h1>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
+                    data-bs-title="Tooltip on right">
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                </button>
+                <p class="fs-3 text-center text-white">Connect strategic goals to the teams that help achieve them. See
+                    progress in real time, update
+                    stakeholders, and keep the company on track.</p>
+
+                <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2 mb-2">Learn about goals</button>
+
+            </div>
+            <div class="col rounded-5" style="background-color: darkblue;">
+                <h1 class="text-info fw-bold">Amplify your impact with AI</h1>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left"
+                    data-bs-title="Tooltip on left">
+                    <img src="data:image/png;base64,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"
+                        alt="">
+                </button>
+
+                <p class="fs-3 text-center text-white">Work smarter and faster with AI-powered workflows that take on
+                    your teams’ busywork.</p>
+
+                <button class="btn btn-outline-success rounded-5 fs-5 fw-bold px-4 py-2 mb-2">Meet Asana AI</button>
+
+            </div>
+            <div class="row d-flex justify-content-center align-items-center mt-5 mb-5 ">
+                <div class="col text-start d-flex justify-content-start align-items-center gap-3">
+                    <div>
+                        <img src="GDPR (2).png" class="img-fluid  w-100 my-image-logo" alt="gdpr logo">
+                    </div>
+                    <div>
+                        <img src="ISO (2).png" class="img-fluid  w-100 my-image-logo" alt="iso logo">
+                    </div>
+                    <div>
+                        <img src="aicpa logo.png" class="img-fluid  w-100 my-image-logo" alt="aicpa logo">
+                    </div>
+                </div>
+                <div class="col text-start">
+                    <h2 class="fs-2 text-dark">Scale with enterprise-grade security</h2>
+                    <p class="fs-5 text-dark">Ensure your company's data is completely secure and that you are in
+                        compliance with the latest standards.</p>
+
+                    <button class="btn btn-outline-secondary rounded-5 fs-5 fw-bold px-4 py-2 mb-2">Explore
+                        security</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  -->
+
+    <div class="container-fluid mt-5">
+        <div class="row  d-flex justify-content-between align-items mt-5">
+            <div class="col mt-5 ms-5">
+                <h1>Connect over 300+ <br> integrations</h1>
+            </div>
+            <div class="col mt-5">
+                <h3>Asana connects with the enterprise tools your organization <br> already uses, right out of the box.
+                </h3>
+                <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2 mb-2 text-white mt-3">See all integrations
+                    
+                </button>
+            </div>
+
+        </div>
+        <div class="row  d-block justify-content-between align-items mt-5">
+            <div class="col d-flex align-items-center gap-2 ">
+
+            </div>
+            <div class="col d-flex align-items-center gap-2">
+
+            </div>
+        </div>
+    </div>
+    <!-- Animation icone -->
+
+    <div class="container text-center">
+        <div class="row gap-2 image-animaation1">
+            <div class="col border border-dark p-2">
+                1 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                2 of 3 (wider)
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+        </div>
+
+        <div class="row mt-2 gap-2 image-animaation2">
+            <div class="col border border-dark p-2">
+                1 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                2 of 3 (wider)
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+            <div class="col border border-dark p-2">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="container mt-5">
+        <div class="row ">
+            <div class="col-sm-2 col-md-4 col-lg-6 justify-content-center align-items-start">
+                <h1 style="color:black; font-weight: bolder; font-size: 3.125rem;">The world’s top companies <br> trust
+                    Asana.</p>
+                    <div>
+
+                        <button class="btn border-dark fs-5 text-dark rounded-5 btn-outline-light p-3" type="button">
+                            See all cases studies
+                        </button>
+                    </div>
+            </div>
+        </div>
+
+        <!--  -->
+
+        <div class="container mt-5 border border-dark border-3 rounded-5">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col">
+                    <div><img src="" alt=""></div>
+                    <hr>
+
+                    <p>Company Size</p>
+                    <p>Enterprise</p>
+                    <p>Industry</p>
+                    <p>Food/Hospitality</p>
+                </div>
+                <div class="col-sm-2 col-md-4 col-lg-6 p-4" style="background-color: #b0e0e6;">
+                    <h2 style="color:black;">Asana makes everything shareable,
+                        which saves us time executing programs because it’s so much easier to replicate and learn from
+                        what others have done..</h2>
+
+                    <p>Simon Levinson</p>
+                    <p>Asana makes everything shareable, which saves us time executing programs because it’s so much easier to replicate and learn from what others have done.
+
+                        Simon Levinson
+                        Global Digital Manufacturing Process Innovation Manager, Danone</p>
+                    <div>
+
+                        <button class="btn border-dark fs-5 text-dark rounded-5 btn-outline-light p-3" type="button">
+                            See all cases studies
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+      "></script>
+</body>
+
+</html>
