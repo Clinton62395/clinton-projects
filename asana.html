@@ -32,12 +32,12 @@
         overflow-x: hidden;
       }
       .navbar {
-        padding: 0rem 0.625rem;
+        padding: 0px 10px;
         height: auto;
       }
 
       .navbar-brand img {
-        height: 3.125rem;
+        height: 50px;
       }
 
       .bi-check {
@@ -46,12 +46,12 @@
       }
 
       .my-image-logo {
-        width: 3.125rem;
-        height: 12.5rem;
+        width: 50px;
+        height: 200px;
         object-fit: contain;
-        border: 0.0625rem solid black;
-        border-radius: 0.625rem;
-        padding: 0.625rem;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
       }
       /* animation des icones */
       .image-animaation1,
@@ -59,7 +59,7 @@
         display: flex;
         white-space: nowrap;
         overflow: hidden;
-        gap: 1.5rem;
+        gap: 24px;
       }
 
       .image-animaation1 {
@@ -72,11 +72,11 @@
 
       .image-animaation1 img,
       .image-animaation2 img {
-        width: 300px;
-        height: 150px;
+        width: 18.75rem;
+        height: 9.375rem;
         object-fit: contain;
-        border-radius: 10px;
-        border: 1px solid gray;
+        border-radius: 0.625rem;
+        border: 0.0625rem solid gray;
       }
 
       @keyframes scrollLeft {
@@ -103,12 +103,12 @@
 
       .menu-flottant {
         position: fixed;
-        top: 50px;
-        bottom: 20px;
-        padding: 10px;
-        left: 0px;
+        top: 3.125rem;
+        bottom: 1.25rem;
+        padding: 0.625rem;
+        left: 0rem;
         z-index: 9999;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         transition: width 0.3s ease-in-out;
       }
 
@@ -116,25 +116,25 @@
         background-color: #212529;
         color: #ffc107;
         border: none;
-        border-radius: 5px;
-        padding: 10px 12px;
-        font-size: 18px;
+        border-radius: 0.3125rem;
+        padding: 0.625rem 0.75rem;
+        font-size: 1.125rem;
         cursor: pointer;
       }
 
       .menu-links {
         display: none;
         flex-direction: column;
-        margin-top: 5px;
+        margin-top: 0.3125rem;
         background-color: #343a40;
-        border-radius: 5px;
-        padding: 10px;
+        border-radius: 0.3125rem;
+        padding: 0.625rem;
       }
 
       .menu-links a {
         color: #ffc107;
         text-decoration: none;
-        margin: 5px 0;
+        margin: 0.3125rem 0;
         font-weight: bold;
       }
 
@@ -145,9 +145,9 @@
         text-decoration: underline;
         color: blue;
         background-color: rgba(246, 242, 239, 0.402);
-        border-radius: 10px;
+        border-radius: 0.625rem;
         transform: scale(1.1);
-        width: 80px;
+        width: 5rem;
         text-align: center;
       }
       /* icone-arrow */
@@ -158,13 +158,13 @@
         fill: white;
       }
       .icone-svg-div {
-        width: 500px;
-        height: 150px;
+        width: 31.25rem;
+        height: 9.375rem;
         background-color: white;
-        padding: 25px 20px;
+        padding: 1.5625rem 1.25rem;
         max-width: 100%;
         position: relative;
-        border-radius: 10px;
+        border-radius: 0.625rem;
       }
       .icone-svg-div:hover {
         background-color: #f4f5f5;
@@ -172,13 +172,38 @@
       /* icone svg div link */
       .icone-svg-div a {
         text-decoration: none;
-        font-size: 30px;
+        font-size: 1.875rem;
         color: #212529;
       }
       .icone-arrow {
         position: absolute;
         left: 80%;
         bottom: 30%;
+      }
+
+      /* icone-animation */
+      .icone-animation {
+        display: flex;
+      }
+      @media (max-width: 48rem) {
+        .icone-animation {
+          animation: translation 15s linear infinite;
+        }
+      }
+      @keyframes translation {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .company-logo {
+        width: 18.75rem; /* ou une autre taille fixe */
+        height: 3.125rem;
+        object-fit: contain;
+        flex-shrink: 0;
       }
     </style>
   </head>
@@ -240,7 +265,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#">
-          <img src="asana.png" alt="logo" style="height: 6.25rem" />
+          <img src="asana.png" alt="logo" style="height: 100px" />
         </a>
         <button
           class="navbar-toggler"
@@ -301,98 +326,401 @@
     <!-- first div -->
 
     <div
-      class="container-fluid mt-5"
-      style="background-color: rgb(255, 234, 236)"
+      class="container-fluid mt-5 mb-5 px-5 pb-5"
+      style="background-color: rgb(255, 234, 236); padding: 3.125rem 0"
     >
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-sm-2 col-md-4 col-lg-6">
-          <h1 style="color: chocolate; font-weight: bold; font-size: 1.875rem">
-            Where work connects
-          </h1>
-          <p>
-            Connect work to goals and automate workflows with AI as your
-            teammate.
-          </p>
-          <div>
-            <button
-              class="btn border-warning rounded-5 me-3 p-3 px-5"
-              style="background-color: chocolate; color: white"
-            >
-              Get Started
-            </button>
-            <button
-              class="btn border-warning rounded-5 btn-outline p-3 px-5"
-              type="button"
-            >
-              View Demo
-            </button>
-          </div>
-        </div>
+      <div class="text-center">
+        <h1 class="mt-5 fw-bold display-3" style="color: rgb(93, 40, 3)">
+          Where your teams and AI <br />
+          coordinate work together
+        </h1>
+        <p class="fs-3 text-dark">
+          See how your work connects to goals while working alongside AI that
+          <br />
+          understands your business.
+        </p>
+
+        <button
+          class="btn border-warning rounded-5 me-3 p-3 px-5 mb-5 fw-bold fs-3"
+          style="background-color: chocolate; color: white"
+        >
+          Get Started
+        </button>
+        <button
+          class="btn border-warning rounded-5 btn-outline-warning p-3 px-5 mb-5 fw-bold fs-3"
+        >
+          See how it works
+        </button>
       </div>
 
-      <div class="row d-flex justify-content-center align-items-center mb-5">
-        <div class="col-sm-2 col-md-4 col-lg-10 mt-5">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/embed/hcY-2Xux2oI"
-              class="border-danger rounded-5"
-              title="Asana video tutorial"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
+      <div
+        class="row d-flex flex-sm-nowrap justify-content-center align-items-center gap-1"
+      >
+        <div class="col col-md-6">
+          <img
+            src="https://assets.asana.biz/m/73643afe7d7ccad0/original/web-cert25-hero-static.png"
+            class="img-fluid w-100 rounded-5"
+            alt="Illustration of AI coordination"
+            style="height: 37.5rem; object-fit: cover"
+          />
+        </div>
+        <div class="col col-md-6">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_mqEY0b8UVQmEQeNtV9_VDCZ5rTG2vMjrODluu9T9ebP30z8S-8hSqaqS2DyvKV-pVwo&usqp=CAU"
+            class="img-fluid w-100 rounded-5"
+            alt="AI and business collaboration image"
+            style="height: 37.5rem; object-fit: cover"
+          />
         </div>
       </div>
     </div>
 
     <!-- Texte -->
-    <div class="container mt-5 mb-5 me-3">
-      <div class="row align-items-center">
-        <div class="col-md-4 text-start">
-          <h3>
-            85% of Fortune 100 <br />
-            companies choose Asana¹
-          </h3>
-        </div>
-        <!-- Logos -->
-        <div class="col-md-8 d-flex flex-wrap justify-content-between gap-3">
+    <div
+      class="container-fluid d-flex flex-column flex-md-row justify-content-center align-items-center mt-5 mb-5 gap-5"
+    >
+      <div class="d-sm-inline-block">
+        <h3 class="fw-bold icone-texte" style="font-size: 2.5rem">
+          85% of Fortune 100 <br />
+          companies choose Asana¹
+        </h3>
+      </div>
+      <!-- Logos -->
+      <div class="overflow-hidden w-100">
+        <div class="d-flex flex-nowrap gap-5 icone-animation">
           <img
             src="ama.png"
             alt="Amazon logo"
             class="company-logo img-fluid"
-            style="max-width: 6.25rem"
+            style="max-width: 100px"
           />
           <img
             src="accentur.png"
             alt="Accenture logo"
-            class="company-logo img-fluid"
-            style="max-width: 6.25rem"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
           />
           <img
             src="johonson.png"
             alt="Johnson & Johnson logo"
-            class="company-logo img-fluid"
-            style="max-width: 6.25rem"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 104px"
           />
           <img
             src="dell.png"
             alt="Dell logo"
-            class="company-logo img-fluid"
-            style="max-width: 6.25rem"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
           />
           <img
             src="merck.png"
             alt="Merck logo"
-            class="company-logo img-fluid"
-            style="max-width: 6.25rem"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
           />
+
+          <!-- double image pour animation -->
+          <img
+            src="ama.png"
+            alt="Amazon logo"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
+          />
+          <img
+            src="accentur.png"
+            alt="Accenture logo"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
+          />
+          <img
+            src="johonson.png"
+            alt="Johnson & Johnson logo"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 104px"
+          />
+          <img
+            src="dell.png"
+            alt="Dell logo"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px"
+          />
+          <img
+            src="merck.png"
+            alt="Merck logo"
+            class="company-logo img-fluid flex-shrink-0"
+            style="max-width: 100px; object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- container en carousel -->
+
+    <div class="position-relative">
+      <button id="nextbtn" class="position-absolute">></button>
+      <button id="prevbtn" class="position-absolute"><</button>
+
+      <div
+        id="scrollcontainer"
+        class="overflow-hidden d-flex gap-3 px-5"
+        style="scroll-behavior: smooth"
+      >
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href=""
+            >Campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href=""
+            >Campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
+        </div>
+        <div
+          class="border border-1 border-gray p-3 h-25"
+          style="min-width: 300px; min-height: 200px"
+        >
+          <a href="">Campaign management</a>
+          <p>Plan, track, and complet your compaigns all in one place.</p>
+          <p>
+            See campaign management
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Section avec le titre -->
     <div class="container mt-5 mb-5">
-      <div class="row d-flex justify-content-center align-items-center">
+      <div
+        class="row d-flex justify-content-center align-items-center text-center"
+      >
         <div class="col text-start">
           <h1 class="text-dark fw-bold display-5">
             See how Asana connects <br />
@@ -573,7 +901,7 @@
 
     <div class="container mt-5 mb-5">
       <div class="align-items">
-        <h1 style="font-size: 50px; font-weight: bolder">
+        <h1 style="font-size: 3.125rem; font-weight: bolder">
           Connect over 300+ <br />
           integrations
         </h1>
@@ -660,7 +988,7 @@
       <div class="image-animaation2">
         <!-- Logos x2 pour boucle fluide -->
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
           alt="logo"
         />
         <img
@@ -690,7 +1018,7 @@
 
         <!-- Doublons -->
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
           alt="logo"
         />
         <img
@@ -722,7 +1050,7 @@
     <!--  -->
 
     <div class="container mt-5">
-      <h1 style="font-weight: bolder; font-size: 70px">
+      <h1 style="font-weight: bolder; font-size: 4.375rem">
         The world’s top companies trust <br />
         Asana.
       </h1>
@@ -781,7 +1109,7 @@
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
                 alt="danoe-logo"
-                style="width: 150px"
+                style="width: 9.375rem"
               />
               <hr />
               <p class="text-muted">Company Size</p>
@@ -803,13 +1131,15 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="container carousel-item border border-2 border-gray rounded-4">
+        <div
+          class="container carousel-item border border-2 border-gray rounded-4"
+        >
           <div class="row p-0">
             <div class="col col-md-5 p-4 text-start">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
                 alt="danoe-logo"
-                style="width: 150px"
+                style="width: 9.375rem"
               />
               <hr />
               <p class="text-muted">Company Size</p>
@@ -827,7 +1157,9 @@
                 as possible. I'm a strong believer that implementing processes,
                 like the ones we built in Asana, will help us drive success.
               </h3>
-              <p style="color: rgba(210, 105, 30, 0.543); padding-top: 10px">
+              <p
+                style="color: rgba(210, 105, 30, 0.543); padding-top: 0.625rem"
+              >
                 Romain Ehrhard <br />
                 CIO, KENDO
               </p>
@@ -845,13 +1177,15 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class=" container carousel-item border border-2 border-gray rounded-4">
+        <div
+          class="container carousel-item border border-2 border-gray rounded-4"
+        >
           <div class="row p-0">
             <div class="col col-md-5 p-4 text-start">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
                 alt="danoe-logo"
-                style="width: 150px"
+                style="width: 9.375rem"
               />
               <hr />
               <p class="text-muted">Company Size</p>
@@ -881,13 +1215,15 @@
         </div>
 
         <!-- Slide 4 -->
-        <div class=" container carousel-item border border-2 border-gray rounded-4">
+        <div
+          class="container carousel-item border border-2 border-gray rounded-4"
+        >
           <div class="row p-0">
             <div class="col col-md-5 p-4 text-start">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
                 alt="danoe-logo"
-                style="width: 150px"
+                style="width: 9.375rem"
               />
               <hr />
               <p class="text-muted">Company Size</p>
@@ -941,7 +1277,9 @@
     >
       <div class="row p-md-0 mt-5">
         <div class="col col-md-6 text-md-start" style="margin-top: 15%">
-          <h1 class="fw-bold" style="font-size: 50px">Get started easily</h1>
+          <h1 class="fw-bold" style="font-size: 3.125rem">
+            Get started easily
+          </h1>
           <p class="fs-3">
             Tour the platform, read a few deep dives, or kickstart your work
             management journey with the right template.
@@ -954,10 +1292,10 @@
             <p class="text-muted">see Asana in action</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="50px"
+              height="3.125rem"
               class="icone-arrow"
               viewBox="0 -960 960 960"
-              width="50px"
+              width="3.125rem"
               fill="#e3e3e3"
             >
               <path
@@ -970,10 +1308,10 @@
             <p class="text-muted">help articles and tutorials</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="50px"
+              height="3.125rem"
               class="icone-arrow"
               viewBox="0 -960 960 960"
-              width="50px"
+              width="3.125rem"
               fill="#e3e3e3"
             >
               <path
@@ -987,10 +1325,10 @@
             <p class="text-muted">get started a faster with a template</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="50px"
+              height="3.125rem"
               class="icone-arrow"
               viewBox="0 -960 960 960"
-              width="50px"
+              width="3.125rem"
               fill="#e3e3e3"
             >
               <path
@@ -1004,5 +1342,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
       "></script>
+
+    <!-- js -->
+    <!-- Script JS -->
+    <script>
+      const container = document.getElementById("scrollcontainer");
+      const scrollAmount = 300;
+
+      document.getElementById("nextbtn").addEventListener("click", () => {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+
+      document.getElementById("prevbtn").addEventListener("click", () => {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+    </script>
+
+    <!-- Style personnalisé (optionnel) -->
+    <style>
+      .min-width-300 {
+        min-width: 300px;
+        flex: 0 0 auto;
+      }
+    </style>
   </body>
 </html>
