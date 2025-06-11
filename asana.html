@@ -23,189 +23,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
   "
     />
+    <!-- link css -->
+    <link rel="stylesheet" href="/styles/asana.css" />
     <title>Grille avec Défilement</title>
-    <style>
-      html,
-      bodyS {
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-      }
-      .navbar {
-        padding: 0px 10px;
-        height: auto;
-      }
-
-      .navbar-brand img {
-        height: 50px;
-      }
-
-      .bi-check {
-        background-color: white;
-        color: black;
-      }
-
-      .my-image-logo {
-        width: 50px;
-        height: 200px;
-        object-fit: contain;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 10px;
-      }
-      /* animation des icones */
-      .image-animaation1,
-      .image-animaation2 {
-        display: flex;
-        white-space: nowrap;
-        overflow: hidden;
-        gap: 24px;
-      }
-
-      .image-animaation1 {
-        animation: scrollLeft 120s linear infinite;
-      }
-
-      .image-animaation2 {
-        animation: scrollRight 120s linear infinite;
-      }
-
-      .image-animaation1 img,
-      .image-animaation2 img {
-        width: 18.75rem;
-        height: 9.375rem;
-        object-fit: contain;
-        border-radius: 0.625rem;
-        border: 0.0625rem solid gray;
-      }
-
-      @keyframes scrollLeft {
-        0% {
-          transform: translateX(0%);
-        }
-
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      @keyframes scrollRight {
-        0% {
-          transform: translateX(-50%);
-        }
-
-        100% {
-          transform: translateX(0%);
-        }
-      }
-
-      /* <!--  FLOTTANT GLOBAL -- >  */
-
-      .menu-flottant {
-        position: fixed;
-        top: 3.125rem;
-        bottom: 1.25rem;
-        padding: 0.625rem;
-        left: 0rem;
-        z-index: 9999;
-        border-radius: 0.3125rem;
-        transition: width 0.3s ease-in-out;
-      }
-
-      .menu-btn {
-        background-color: #212529;
-        color: #ffc107;
-        border: none;
-        border-radius: 0.3125rem;
-        padding: 0.625rem 0.75rem;
-        font-size: 1.125rem;
-        cursor: pointer;
-      }
-
-      .menu-links {
-        display: none;
-        flex-direction: column;
-        margin-top: 0.3125rem;
-        background-color: #343a40;
-        border-radius: 0.3125rem;
-        padding: 0.625rem;
-      }
-
-      .menu-links a {
-        color: #ffc107;
-        text-decoration: none;
-        margin: 0.3125rem 0;
-        font-weight: bold;
-      }
-
-      .menu-flottant:hover .menu-links {
-        display: flex;
-      }
-      .menu-flottant a:hover {
-        text-decoration: underline;
-        color: blue;
-        background-color: rgba(246, 242, 239, 0.402);
-        border-radius: 0.625rem;
-        transform: scale(1.1);
-        width: 5rem;
-        text-align: center;
-      }
-      /* icone-arrow */
-
-      .icone-arrow {
-        border-radius: 50%;
-        background-color: black;
-        fill: white;
-      }
-      .icone-svg-div {
-        width: 31.25rem;
-        height: 9.375rem;
-        background-color: white;
-        padding: 1.5625rem 1.25rem;
-        max-width: 100%;
-        position: relative;
-        border-radius: 0.625rem;
-      }
-      .icone-svg-div:hover {
-        background-color: #f4f5f5;
-      }
-      /* icone svg div link */
-      .icone-svg-div a {
-        text-decoration: none;
-        font-size: 1.875rem;
-        color: #212529;
-      }
-      .icone-arrow {
-        position: absolute;
-        left: 80%;
-        bottom: 30%;
-      }
-
-      /* icone-animation */
-      .icone-animation {
-        display: flex;
-      }
-      @media (max-width: 48rem) {
-        .icone-animation {
-          animation: translation 15s linear infinite;
-        }
-      }
-      @keyframes translation {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-
-      .company-logo {
-        width: 18.75rem; /* ou une autre taille fixe */
-        height: 3.125rem;
-        object-fit: contain;
-        flex-shrink: 0;
-      }
-    </style>
   </head>
 
   <body>
@@ -326,15 +146,15 @@
     <!-- first div -->
 
     <div
-      class="container-fluid mt-5 mb-5 px-5 pb-5"
-      style="background-color: rgb(255, 234, 236); padding: 3.125rem 0"
+      class="container-fluid mt-0 mb-5 px-5 pb-5 rounded-bottom"
+      style="background-color: #3f1a03; padding: 3.125rem 0"
     >
       <div class="text-center">
-        <h1 class="mt-5 fw-bold display-3" style="color: rgb(93, 40, 3)">
+        <h1 class="mt-5 fw-bold text-white display-3">
           Where your teams and AI <br />
           coordinate work together
         </h1>
-        <p class="fs-3 text-dark">
+        <p class="fs-3 text-white">
           See how your work connects to goals while working alongside AI that
           <br />
           understands your business.
@@ -456,7 +276,7 @@
 
     <!-- container en carousel -->
 
-    <div class="position-relative">
+    <div class="position-relative carousel-a-fleche">
       <button id="nextbtn" class="position-absolute">></button>
       <button id="prevbtn" class="position-absolute"><</button>
 
@@ -513,21 +333,7 @@
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
         >
-          <a href=""
-            >Campaign management
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-fleche"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              />
-            </svg>
-          </a>
+          <a href="">Campaign management </a>
           <p>Plan, track, and complet your compaigns all in one place.</p>
           <p>
             See campaign management
@@ -567,25 +373,12 @@
             </svg>
           </p>
         </div>
+
         <div
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
         >
-          <a href=""
-            >Campaign management
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-fleche"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              />
-            </svg>
-          </a>
+          <a href="">Campaign management </a>
           <p>Plan, track, and complet your compaigns all in one place.</p>
           <p>
             See campaign management
@@ -603,6 +396,7 @@
             </svg>
           </p>
         </div>
+
         <div
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
@@ -625,6 +419,7 @@
             </svg>
           </p>
         </div>
+
         <div
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
@@ -647,6 +442,7 @@
             </svg>
           </p>
         </div>
+
         <div
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
@@ -669,6 +465,7 @@
             </svg>
           </p>
         </div>
+
         <div
           class="border border-1 border-gray p-3 h-25"
           style="min-width: 300px; min-height: 200px"
@@ -717,22 +514,44 @@
     </div>
 
     <!-- Section avec le titre -->
-    <div class="container mt-5 mb-5">
+    <!-- <div
+      class="container-fluid mt-5 mb-5 rounded-top-4"
+      style="background-color: #b0e0e6"
+    >
       <div
-        class="row d-flex justify-content-center align-items-center text-center"
+        class="row d-flex justify-content-center align-items-center gap-3"
       >
-        <div class="col text-start">
-          <h1 class="text-dark fw-bold display-5">
-            See how Asana connects <br />
-            work across different <br />
-            departments
+        <div class="text-start mx-5">
+          <h1 class="text-primary fw-bold display-5">
+            What sets Asana apart
           </h1>
         </div>
+        <div class="col col-md-6 bg-primary rounded-3">
+          <h1 class="text-light fs-5 fw-bold">
+            More clarity and <br> accountability
+          </h1>
+          <p class="text-light fs-3 text-center">
+            Connect strategic goals to the teams that help achieve them. Keep
+            your company on track with AI working alongside your teams.
+          </p>
+        </div>
+
+        <div class="col col-md-6 bg-primary rounded-3">
+          <h1 class="text-light fs-5 fw-bold">
+            Amplify your impact with <br> AI
+          </h1>
+          <p class="text-light fs-3 text-center">
+            Let Asana AI handle work for you—with the full context of your
+            business—so your teams can achieve their goals faster.
+          </p>
+        </div>
       </div>
-    </div>
+    </div> -->
 
     <!--  -->
-    <div class="container border border-secondary border-1 rounded-5 p-3">
+    <div
+      class="container-fluid rounded-top-5 border border-secondary border-1 p-3"
+    >
       <div class="row d-flex justify-content-center align-items-center gap-3">
         <div class="col-auto">
           <button class="btn btn-danger rounded-5 fs-5 fw-bold px-4 py-2">
@@ -794,65 +613,65 @@
 
     <!--  -->
     <div
-      class="container-fluid d-flex align-items-center justify-content-center text-center mt-5 mb-5"
-      style="background-color: #b0e0e6"
+      class="container-fluid mx-auto rounded-top-4 mt-5 mb-5"
+      style="background-color: #b0e0e6; height: 150vh; padding-top: 50px"
     >
-      <div class="row align-items-center gap-3 mt-5 mb-5 w-100 h-100">
-        <div class="col rounded-5" style="background-color: darkblue">
-          <h1 class="text-info fw-bold">More clarity and accountability</h1>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-toggle="tooltip"
-            data-bs-placement="right"
-            data-bs-title="Tooltip on right"
-          >
-            <img
-              src="data:image/png;base64,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"
-              alt=""
-            />
-          </button>
-          <p class="fs-3 text-center text-white">
+      <h1 class="fs-1 fw-bold text-start ms-5" style="color: darkblue">
+        What sets Asana apart
+      </h1>
+      <div
+        class="row d-flex justify-content-center align-items-center gap-3 mt-2 mb-5 mx-5"
+        style="height: 90%"
+      >
+        <div
+          class="col rounded-3 p-5"
+          style="background-color: darkblue; height: 90%"
+        >
+          <h1 class="text-light fw-bold">More clarity and accountability</h1>
+
+          <p class="text-small text-center text-white">
             Connect strategic goals to the teams that help achieve them. See
             progress in real time, update stakeholders, and keep the company on
             track.
           </p>
-
-          <button
-            class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
-          >
-            Learn about goals
-          </button>
-        </div>
-
-        <div class="col rounded-5" style="background-color: darkblue">
-          <h1 class="text-info fw-bold">Amplify your impact with AI</h1>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-toggle="tooltip"
-            data-bs-placement="left"
-            data-bs-title="Tooltip on left"
-          >
-            <img
-              src="data:image/png;base64,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"
-              alt=""
-            />
-          </button>
-
-          <p class="fs-3 text-center text-white">
-            Work smarter and faster with AI-powered workflows that take on your
-            teams’ busywork.
-          </p>
-
-          <button
-            class="btn btn-outline-success rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
-          >
-            Meet Asana AI
-          </button>
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <div class="d-flex justify-content-start" style="margin-top: 40%">
+            <button
+              class="btn btn-secondary rounded-5 fs-5 p-5 fw-bold px-4 py-2 mb-2"
+            >
+              Learn about goals
+            </button>
+          </div>
         </div>
 
         <div
+          class="col rounded-3 p-5"
+          style="background-color: darkblue; height: 90%"
+        >
+          <h1 class="text-light fw-bold">Amplify your impact with AI</h1>
+
+          <p class="text-small text-center text-white">
+            Work smarter and faster with AI-powered workflows that take on your
+            teams’ busywork.
+          </p>
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <div class="d-flex justity-content-start" style="margin-top: 40%">
+            <button
+              class="btn btn-outline-success rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
+            >
+              Meet Asana AI
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div
           class="row d-flex justify-content-center align-items-center mt-5 mb-5"
         >
           <div
@@ -894,10 +713,8 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
-
     <!--  -->
+    </div>
 
     <div class="container mt-5 mb-5">
       <div class="align-items">
@@ -1272,11 +1089,13 @@
     <!-- Get started easily -->
 
     <div
-      class="container d-flex justify-content-between align-items-center p-5 rounded-5"
-      style="background-color: #343a401a; height: 100vh"
+      class="container mt-5 p-5 rounded-5 mb-5"
+      style="background-color: #343a401a; height: 100%"
     >
-      <div class="row p-md-0 mt-5">
-        <div class="col col-md-6 text-md-start" style="margin-top: 15%">
+      <div
+        class="row h-100 p-md-0 d-flex mx-auto justify-content-between align-items-center p-5"
+      >
+        <div class="col-12 col-md-6 text-md-start" style="margin-top: 0">
           <h1 class="fw-bold" style="font-size: 3.125rem">
             Get started easily
           </h1>
@@ -1286,7 +1105,7 @@
           </p>
         </div>
 
-        <div class="col col-md-6 gap-md-5 p-md-0">
+        <div class="col-12 col-md-6 gap-md-5 p-md-0">
           <div class="icone-svg-div m-5">
             <a href="">Try the Asana demo</a>
             <p class="text-muted">see Asana in action</p>
@@ -1340,22 +1159,245 @@
       </div>
     </div>
 
+    <!-- Recognized as a leader by top analyst firms -->
+
+    <div class="container-fluid mt-5 mb-5 mx-auto py-5 h-auto pb-5 h-100">
+      <h1 class="fw-bold display-5 ms-5">
+        Recognized as a leader by top <br />
+        analyst firms
+      </h1>
+      <div
+        class="row h-100 d-flex justify-content-center align-items-center mx-auto flex-sm-culumn gap-3 mt-5 gartner-IDC-Container"
+      >
+        <div class="col-12 col-md-3">
+          <div
+            class="rounded-4 text-center d-flex justify-content-center align-items-center"
+            style="background-color: darkblue"
+          >
+            <h1 class="fw-bold text-light">Gartner</h1>
+          </div>
+
+          <p class="mt-4 fs-5">
+            A Leader in the Gartner Magic Quadrant for Collaborative Work
+            Management² two years in a row
+          </p>
+          <a href=""
+            >Learn more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              /></svg
+          ></a>
+        </div>
+
+        <div class="col-12 col-md-3">
+          <div
+            class="rounded-4 bg-secondary d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="/images/asana/asana_forester.png"
+              alt="image"
+              class="img-fluid w-25"
+            />
+          </div>
+          <p class="mt-4 fs-5">
+            A Leader in the The Forrester Wave™: Collaborative Work Management
+            Tools Report³
+          </p>
+          <a href=""
+            >Learn more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="3.125rem"
+              class="icone-fleche"
+              viewBox="0 -960 960 960"
+              width="3.125rem"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              /></svg
+          ></a>
+        </div>
+        <div class="col-12 col-md-3">
+          <div
+            class="d-flex justify-content-center align-items-center rounded-4"
+            style="background-color: #b0e0e6"
+          >
+            <img src="/images/asana/IDC-LOGO.png" class=" " alt="idc logo" />
+          </div>
+
+          <p class="mt-4 fs-5">
+            A Leader in the IDC MarketScape: Worldwide Collaborative Work
+            Management Vendor Assessment⁴
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer
+      class="container-fluid mx-auto rounded-top-5"
+      style="background-color: rgb(108, 0, 2); margin-top: 10%"
+    >
+      <div class="text-dark pb-3 text-center p-2">
+        <h2
+          class="fw-bold"
+          style="font-size: 50px; color: wheat; margin-top: 10%"
+        >
+          The only platform that can <br />
+          support your company at any <br />
+          scale
+        </h2>
+        <a
+          href="#"
+          class="btn btn-light fw-bold rounded-5 p-3 px-5 my-3"
+          style="color: rgb(108, 0, 2)"
+        >
+          Get started
+        </a>
+
+        <ul class="small text-muted">
+          <li>Accurate as of December 2023, includes free and paid users.</li>
+          <li>
+            See the 2024 Gartner® Magic Quadrant™ for Collaborative Work
+            Management (CWM). GARTNER is a registered trademark and service mark
+            of Gartner, Inc. and/or its affiliates in the U.S. and
+            internationally. MAGIC QUADRANT and PEER INSIGHTS are registered
+            trademarks. The GARTNER PEER INSIGHTS CUSTOMERS’ CHOICE badge is
+            used herein with permission. All rights reserved.
+          </li>
+          <li>
+            See The Forrester Wave™: Collaborative Work Management Tools, Q4
+            2022 report. Forrester and Forrester Wave are trademarks of
+            Forrester Research, Inc. Information reflects judgment at the time
+            and is subject to change.
+          </li>
+          <li>
+            IDC MarketScape: Worldwide Collaborative Work Management 2023–2024
+            Vendor Assessment — Uniting Teams, Data, and AI for Flexible Work,
+            Doc #US49434923, December 2023.
+          </li>
+        </ul>
+        <hr class="text-danger mt3 mb-3" />
+        <!-- grid du footer-->
+        <div class="row mt-5 p-3 d-flex justify-content-center align-items-center gap-2">
+          <div class="col col-md-2 text-center">
+            <img
+              src="/images/asana/asanalogo (2).png"
+              alt="asana logo"
+              class="w-25"
+            />
+          </div>
+          <div class="col-md-2 text-center">
+            <h6>Asana Home</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">New to Asana?</a></li>
+              <li><a href="#">Product overview</a></li>
+              <li><a href="#">All features</a></li>
+              <li><a href="#">Latest feature release</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 text-center">
+            <h6>Pricing</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Starter plan</a></li>
+              <li><a href="#">Advanced plan</a></li>
+              <li><a href="#">Enterprise</a></li>
+            </ul>
+            <h6 class="mt-3">App integrations</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">AI work management</a></li>
+              <li><a href="#">Project management</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 text-center">
+            <h6>Use cases</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">Campaign management</a></li>
+              <li><a href="#">Content calendar</a></li>
+              <li><a href="#">Creative production</a></li>
+              <li><a href="#">Goal management</a></li>
+              <li><a href="#">Organizational planning</a></li>
+              <li><a href="#">Product launches</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 text-center">
+            <h6>Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Leadership</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 small text-muted">
+          &copy; 2025 Asana, Inc. | English
+        </div>
+        <h6 class="mt-3">Download the app</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Download the Asana iOS app</a></li>
+          <li><a href="#">Download app from Google Play</a></li>
+        </ul>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
       "></script>
 
-    <!-- js -->
     <!-- Script JS -->
     <script>
       const container = document.getElementById("scrollcontainer");
       const scrollAmount = 300;
 
-      document.getElementById("nextbtn").addEventListener("click", () => {
+      const nextBtn = document.getElementById("nextbtn");
+      const prevBtn = document.getElementById("prevbtn");
+
+      nextBtn.addEventListener("click", () => {
         container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        updateButtonState();
       });
 
-      document.getElementById("prevbtn").addEventListener("click", () => {
+      prevBtn.addEventListener("click", () => {
         container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        updateButtonState();
       });
+
+      function updateButtonState() {
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        // Désactiver le bouton "prev" si au tout début
+        if (container.scrollLeft <= 0) {
+          prevBtn.style.opacity = "0.5";
+          prevBtn.disabled = true;
+        } else {
+          prevBtn.style.opacity = "1";
+          prevBtn.disabled = false;
+        }
+
+        // Désactiver le bouton "next" si à la fin
+        if (container.scrollLeft >= maxScrollLeft) {
+          nextBtn.style.opacity = "0.5";
+          nextBtn.disabled = true;
+        } else {
+          nextBtn.style.opacity = "1";
+          nextBtn.disabled = false;
+        }
+      }
+
+      // Appel initial
+      updateButtonState();
     </script>
 
     <!-- Style personnalisé (optionnel) -->
