@@ -241,16 +241,82 @@
         color: #212529;
         font-weight: bold;
       }
-    /* footer */
+    /* section part */
 
 
-    footer ul:nth-of-type(1) li{
+    section div:nth-child(1) ul:nth-of-type(1) li{
         color: whitesmoke;
         list-style: decimal;
         text-align: start;
         margin: 10px;
 
     }
-    footer h6{
+    section h6{
         color: white;
+        text-align: start;
+        font-weight: bold;
+    }
+    /* footer-link dans row */
+    .footer-link ul{
+      margin-top: 30px;
+    }
+
+    .footer-link ul li{
+      text-align: start;
+      margin-top: 10px;
+    }
+    .footer-link ul li:hover{
+      text-decoration: underline  rgba(224, 255, 255, 0.826);
+      transition: text-decoration 1s ease-in-out;
+    }
+
+    .footer-link ul li a{
+      text-decoration: none;
+      color: rgba(224, 255, 255, 0.826);
+      font-weight: bold;
+      text-align: start;
+
+    }
+    /* footer-copirypt */
+
+    .footer-copirypt{
+      background-color: rgba(74, 1, 2, 0.92); 
+      margin-top: 10px;
+      height: 100px;
+
+    }
+
+    .footer-copirypt p {
+      color: rgba(224, 255, 255, 0.826);
+      font-weight: bold;
+    }
+    .footer-copirypt a {
+      text-decoration: none;
+      color: rgba(224, 255, 255, 0.826);
+      font-weight: bold;
+
+    }
+    .footer-copirypt a:hover{
+      text-decoration: underline;
+      transition: text-decoration 15s linear ease-in-out;
+
+    }
+
+   
+
+    /* icon footer */
+    .footer-copirypt .bi{
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      font-weight: bold;
+      border-radius: 50%;
+      background-color: black;
+      color: rgb(179, 174, 174);
+    }
+    .footer-copirypt .bi:hover{
+      background-color: lightblue;
+      transition: all 0.5 ease-in-out;
     }
