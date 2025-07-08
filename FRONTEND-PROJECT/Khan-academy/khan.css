@@ -3,6 +3,35 @@
     padding: 0px;
 
 }
+
+.btn-back-fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #010710c6;
+    color: rgb(242, 241, 241);
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .btn-back-fixed i {
+    margin-right: 8px;
+  }
+
+  .btn-back-fixed:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  
 .navbar img{
     background-color: inherit;
     width: 50px;
