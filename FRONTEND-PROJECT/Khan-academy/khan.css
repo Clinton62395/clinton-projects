@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.navbar img{
+    background-color: inherit;
+    width: 50px;
+}
+
+/*  */
+
+  .left-section {
+      background-color: #1e453e;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .left-section img {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .right-section {
+      padding: 3rem;
+    }
+    .btn-social  {
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 2px solid #ccc;
+      width: 450px;
+      margin-bottom: 10px;
+      padding: 10px 5px;
+      font-weight: 500px;
+      color: black;
+      font-size: 15px;
+      background-color: transparent;
+      border-radius: 5px;
+    }
+    .btn-social:hover{
+        color: rgb(0, 136, 255);
+        border:2px solid #007bff;
+    }
+
+    .login-btn{
+        color: white;
+        font-size: 14px;
+        border-radius: 5px;
+        background-color: #acaaaaaf;
+        padding: 5px;
+        cursor: not-allowed;
+        border: none;
+    }
+    form input{
+        width: 300px;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #007bff;
+    }
+
+
+
+
+
+
+/* footer  */
+
+footer{
+    background-color: rgba(1, 1, 68, 0.9);
+}
+footer ul li{
+    padding: 5px 5px;
+}
+footer h6:hover{
+    text-decoration: underline;
+}
+
+ footer a {
+    font-size: 14px;
+    text-decoration: none;
+      color: #fff !important;
+      transition: all 0.5s ease-in;
+    }
+ footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer ul {
+      padding-left: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer-icons a {
+      font-size: 1.2rem;
+      margin-right: 10px;
+      color: white;
+    }
+
+    .footer-icons a:hover {
+      color: #ccc;
+    }
+
+    select{
+        background-color: transparent;
+        color: white;
+        margin-left: 5px;
+        outline: none;
+        border: none;
+    }
+    select option{
+        color: black;
+    }
+
+    /* reseaux-sociaux-icone */
+
+    .reseaux-sociaux-icone i{
+        font-size: 30px;
+        color: #ccc !important;
+
+    }
+    .reseaux-sociaux-icone i:hover{
+       color:  #007bff !important;
+    }
+    /* separeted-btn
+    .separeted-btn::after:hover{
+      border: 2px solid blue;
+      padding: 5px;
+      border-radius: 10px;
+    } */

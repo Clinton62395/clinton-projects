@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whatsapp first page clone</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="whasapp.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- bootsrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Boostsrap  link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+  "
+    />
+
+    <link rel="stylesheet" href="styles/whatsapp.css" />
+  </head>
+  <body>
+    <!-- navbar of whasapp -->
+    <nav class="navbar navbar-expand-lg shadow-lg fixed-top">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="images/whatsap-logo.png" class="w-25" alt="logo" />
+        </a>
+
+        <!-- Toggle button for mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Liens de gauche -->
+          <ul class="navbar-nav mx-auto mb-lg-0 d-flex align-items-center">
+            <li class="nav-item mx-3">
+              <a class="nav-link text-underline active text-small" href="#">
+                Features <i class="bi bi-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-underline text-small" href="#">Privacy</a>
+            </li>
+            <li class="nav-item mx-">
+              <a class="nav-link text-underline text-small" href="#">
+                Help Center <i class="bi bi-chevron-down"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-underline text-small" href="#">Blog</a>
+            </li>
+          </ul>
+
+          <!-- Liens de droite -->
+          <ul class="navbar-nav d-flex align-items-center">
+            <li class="nav-item mx-3">
+              <a class="nav-link text-underline border-end text-small" href="#">
+                For Business
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link text-underline text-small" href="#">Apps</a>
+            </li>
+
+            <!-- Boutons -->
+            <li class="nav-item mx-3">
+              <a class="nav-link text-dark text-small" href="#">
+                Log in <i class="bi bi-chevron-compact-right"></i>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link btn text-white text-small" href="#">
+                Download <i class="bi bi-download"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- first div of whasapp page -->
+
+    <div
+      class="container rounded-5 background-image d-flex justify-content-center align-items-center"
+      style="margin-top: 100px"
+    >
+      <div class="w-100 h-100 position-relative">
+        <img
+          src="images/what_image-removebg-preview.png"
+          style="width: 100%; height: 100%"
+          class="background"
+          alt="image"
+        />
+      </div>
+      <div class="top-left">
+        <img
+          src="images/cup-removebg-preview.png"
+          class="overlay"
+          alt="image"
+          alt="image"
+          style="width: 40%"
+        />
+      </div>
+      <div class="image-center" style="width: 250px; height: 300px">
+        <img
+          src="images/whasp-picture-removebg-preview.png"
+          alt="image "
+          class="img-fluid rounded-5"
+          style="
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border: 5px solid white;
+          "
+        />
+      </div>
+      <!-- les petites images sur la page -->
+
+      <div>
+        <img
+          src="images/WHATSP-VOICE.png"
+          alt="Small Image 1"
+          class="img-fluid rounded-5 w-25"
+          style="top: 50px; left: 60%"
+        />
+      </div>
+      <div>
+        <img
+          src="images/whatsap mess.png"
+          alt="Small Image 1"
+          class="img-fluid rounded-5 w-25"
+          style="bottom: 20px; left: 60%"
+        />
+      </div>
+      <div>
+        <img
+          src="images/what-conversation.png"
+          alt="Small Image 1"
+          class="img-fluid rounded-5 w-25"
+          style="top: 30%; left: 60%"
+        />
+      </div>
+      <div>
+        <img
+          src="images/cup-removebg-preview.png"
+          alt="Small Image 1"
+          class="img-fluid rounded-5"
+          style="top: 20%; left: 80%; width: 100px"
+        />
+      </div>
+      <!-- text de div -->
+      <div class="text">
+        <h1
+          class="text-white display-5 mb-3"
+          style="font-size: 50px; font-weight: bolder"
+        >
+          Message <br />privately
+        </h1>
+        <p class="text-white fs-5">
+          Simple, reliable, private messaging and <br />calling for free*,
+          available all over the <br />
+          world.
+        </p>
+
+        <div class="d-flex gap-2">
+          <a
+            class="nav-link btn text-white bg-success px-2 border-1 p-1 rounded-5 border-dark fs-5"
+            href="#"
+          >
+            Download <i class="bi bi-download"></i>
+          </a>
+
+          <a
+            class="nav-link text-dark bg-light px-2 p-1 border-1 border-dark rounded-5 fs-5"
+            href="#"
+          >
+            Log in <i class="bi bi-chevron-compact-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- seconde div -->
+    <div class="text-small text-end mx-5">
+      <span class="text-small text-center">
+        * Data charges may apply. Contact your provider for details.
+      </span>
+    </div>
+    <!-- Never miss a moment with voice and video calls -->
+
+    <!-- whatssap page avec des bulles de comminication -->
+
+    <section
+      class="position-relative py-5"
+      style="height: 100%; overflow: hidden; margin-top: 24px"
+    >
+      <div
+        class="container py-5 position-relative z-2 mt-5 d-flex justify-content-center align-items-center"
+        style="height: 600px"
+      >
+        <!-- images en haut -->
+        <img
+          src="https://randomuser.me/api/portraits/men/96.jpg"
+          class="floating-img"
+          style="bottom: 80%; left: 20%; width: 40px"
+        />
+        <img
+          src="https://randomuser.me/api/portraits/women/35.jpg"
+          class="floating-img"
+          style="bottom: 80%; right: 30%; width: 40px"
+        />
+        <img
+          src="https://randomuser.me/api/portraits/women/59.jpg"
+          class="floating-img"
+          style="bottom: 80px; left: 20%; width: 40px"
+        />
+        <img
+          src="https://randomuser.me/api/portraits/men/22.jpg"
+          class="floating-img"
+          style="bottom: 70px; right: 15%; width: 40px"
+        />
+        <img
+          src="https://randomuser.me/api/portraits/women/89.jpg"
+          class="floating-img"
+          style="top: 120px; left: 50%; width: 40px"
+        />
+
+        <!-- Bulles de messages -->
+        <div
+          class="message-bubble bg-success text-white"
+          style="top: 95px; left: 35%"
+        >
+          🌙 جميل جداً <span class="small">11:59</span>
+        </div>
+        <div
+          class="message-bubble bg-light text-dark"
+          style="top: 40px; right: 30%"
+        >
+          Hello! <span class="small">11:53</span>
+        </div>
+        <div
+          class="message-bubble bg-success text-white"
+          style="top: 130px; right: 20%"
+        >
+          Hallo Freunde <span class="small">11:59</span>
+        </div>
+        <div
+          class="message-bubble bg-light text-dark"
+          style="bottom: 110px; left: 25%"
+        >
+          Bonjour <span class="small">11:53</span>
+        </div>
+        <div
+          class="message-bubble bg-light text-dark"
+          style="bottom: 90px; left: 50%"
+        >
+          Привет <span class="small">11:53</span>
+        </div>
+        <div
+          class="message-bubble bg-light text-dark"
+          style="bottom: 100px; right: 28%"
+        >
+          Hola! <span class="small">11:53</span>
+        </div>
+        <div class="position-relative">
+          <h2 class="fw-normal" style="max-width: 600px; margin: auto">
+            With private messaging and calling, you can be yourself, speak
+            freely and feel close to the most important people in your life no
+            matter where they are.
+          </h2>
+        </div>
+      </div>
+
+      <!-- Profils & Messages flottants -->
+      <img
+        src="https://randomuser.me/api/portraits/women/11.jpg"
+        class="floating-img"
+        style="bottom: 40px; left: 25%; width: 40px"
+      />
+      <img
+        src="https://randomuser.me/api/portraits/men/13.jpg"
+        class="floating-img"
+        style="bottom: 60px; right: 22%; width: 40px"
+      />
+      <img
+        src="https://randomuser.me/api/portraits/women/21.jpg"
+        class="floating-img"
+        style="bottom: 80px; left: 20%; width: 40px"
+      />
+      <img
+        src="https://randomuser.me/api/portraits/women/34.jpg"
+        class="floating-img"
+        style="bottom: 70px; left: 15%; width: 40px"
+      />
+      <img
+        src="https://randomuser.me/api/portraits/men/44.jpg"
+        class="floating-img"
+        style="bottom: 120px; left: 50%; width: 40px"
+      />
+    </section>
+
+    <!--toisieme div  -->
+    <div class="contain mt-5">
+      <div
+        class="row justify-content-center flex-md-nowrap align-items-center p-2 flex-wrap"
+      >
+        <div class="col col-md-7 me-auto">
+          <div style="padding: 15%">
+            <h1 style="font-size: 50px">
+              Never miss a <br />moment with <br />
+              voice and <br />video calls
+            </h1>
+            <p class="text-small mt-3 fs-5">
+              From a group call to classmates to a quick call with mom, <br />
+              feel like you’re in the same room with voice and <br />video
+              calls.
+            </p>
+
+            <a href="" class="learn-more-1">Learn more</a>
+            <i class="bi bi-chevron-compact-right"></i>
+          </div>
+        </div>
+        <div class="col col-md-5">
+          <img
+            src="/images/whasap profile.png"
+            class="img-fluid w-50 h-50"
+            alt="image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Speak freely -->
+
+    <div class="container-fluid mt-5 Speak-freely">
+      <div
+        class="row justify-content-center align-items-center mx-auto gap-4 flex-md-nowrap p-2 text-white flex-wrap"
+      >
+        <!-- Colonne image -->
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <img
+            src="/images/whasap-backround.png"
+            class="img-fluid"
+            alt="whatsapp background"
+          />
+        </div>
+
+        <!-- Colonne texte -->
+        <div class="col-12 col-md-6">
+          <h1 class="fw-bold">
+            Speak <br /><span style="color: green">freely</span>
+          </h1>
+          <p class="mt-3">
+            With end-to-end encryption on WhatsApp, your personal <br />
+            messages and calls are secured with a lock. Only you <br />
+            and the person you're talking to can read or listen to <br />
+            them, and no one else, not even WhatsApp.
+          </p>
+          <a href="#" class="learn-more-freely"> Learn more </a>
+          <i class="bi bi-chevron-compact-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div class="container mt-5">
+      <div
+        class="row justify-content-center flex-md-nowrap align-items-center p-2 flex-wrap"
+      >
+        <div class="col col-md-7 me-auto">
+          <div style="padding: 15%">
+            <h1 style="font-size: 50px">
+              Keep in touch <br />
+              with your groups
+            </h1>
+            <p class="text-small mt-3 fs-5">
+              Whether it's planning an outing with friends or simply <br />
+              staying on top of your family chats, group conversations <br />
+              should feel effortless.
+            </p>
+
+            <a href="" class="learn-more-1">Learn more</a>
+            <i class="bi bi-chevron-compact-right"></i>
+          </div>
+        </div>
+        <div class="col col-md-5">
+          <img
+          src="https://static.vecteezy.com/system/resources/previews/013/473/360/non_2x/template-interface-whatsapp-on-your-phone-smartphone-chat-whatsapp-free-vector.jpg"
+          class="img-fluid w-100 rounded-4 me-5" " alt="image"
+          style="min-height: 500px; margin-left: 15px;" />
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div class="container mt-5">
+      <div
+        class="row justify-content-center align-items-center mx-auto gap-4 flex-md-nowrap p-2 text-dark w-100 h-100 flex-wrap"
+      >
+        <!-- Colonne image -->
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUOMrR5lO-4kk805PfoeNdXWaMM-HUMEyhuw&s"
+            class="img-fluid rounded-5"
+            alt="whatsapp background"
+            style="min-height: 500px"
+          />
+        </div>
+        <!-- Colonne texte -->
+        <div class="col-12 col-md-6">
+          <h1 class="fw-bold" style="font-size: 50px">
+            Say what <br />
+            you feel
+          </h1>
+          <p class="mt-3 fs-5">
+            Express yourself without words. Use stickers and GIFs or <br />
+            share everyday moments on Status. Record a voice <br />
+            message for a quick hello or a longer story.
+          </p>
+          <a href="#" class="learn-more-1"> Learn more </a>
+          <i class="bi bi-chevron-compact-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <div class="container mt-5 mb-5">
+      <div
+        class="row justify-content-center flex-wrap flex-md-nowrap align-items-center p-3 position-relative"
+      >
+        <div class="col col-md-7 me-auto position-relative">
+          <div style="padding: 15%">
+            <h1 style="font-size: 50px">
+              Transform <br />
+              your business
+            </h1>
+            <p class="text-small mt-3 fs-5">
+              WhatsApp Business helps you reach your customers <br />
+              globally to deliver compelling experiences at scale. <br />
+              Showcase your products and services, increase sales,<br />
+              and build relationships all with WhatsApp.
+            </p>
+
+            <a href="" class="learn-more-1">Learn more</a>
+            <i class="bi bi-arrow-up-right fs-2 fw-bold"></i>
+          </div>
+        </div>
+        <div class="col col-md-5">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrriQlxJ8Wiv-VLizaAWHRHOSAZTqr_qsvc8qEUDZvC0cZpaL7XXN7S_i48DTnNx9bLcY&usqp=CAU"
+            class="img-fluid w-100 rounded-5 me-5"
+            alt="image"
+            style="min-height: 500px; margin-left: 15px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- div en overflow hidden -->
+
+    <div style="background-color: #111b21">
+      <!--  -->
+      <div
+        class="container-fluid position-relative"
+        style="
+          height: 800px;
+          background-color: #a2fcbe;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          padding: 50px 0;
+        "
+      >
+        <!-- Scroll buttons -->
+        <button id="scrollLeft">
+          <i class="bi bi-chevron-compact-left"></i>
+        </button>
+        <button id="scrollRight">
+          <i class="bi bi-chevron-compact-right"> </i>
+        </button>
+
+        <!-- Content to scroll -->
+        <div
+          id="scrollContainer"
+          class="row h-100 flex-nowrap overflow-hidden gap-3 px-3 position-relative"
+        >
+          <div class="col-12 col-md-4 text-start position-relative">
+            <h2 class="fw-bold mb-3 text-dark" style="font-size: 40px">
+              Stay up to date
+            </h2>
+            <p class="text-dark fs-5">
+              Get the latest from WhatsApp: news, useful tips, and our newest
+              features to help you stay connected.
+            </p>
+          </div>
+
+          <div
+            class="col-12 col-md-4 rounded-5 px-5 position-relative"
+            style="background-color: #fff; padding-bottom: 20px; height: 70%"
+          >
+            <div class="d-flex justify-content-start align-items-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="whatsapp-logo"
+                class="img-fluid"
+                style="width: 50px"
+              />
+            </div>
+            <h3>
+              Catch up on conversations <br />
+              with Private Message <br />
+              Summaries
+            </h3>
+            <p class="text-dark fs-5">
+              We're excited to introduce Message Summaries, a new option that
+              uses Meta AI to privately and quickly summarize unread messages in
+              a chat, so you can get an idea of what is...
+            </p>
+
+            <!-- button read more -->
+            <div class="mb-3 mt-5">
+              <a
+                href="#"
+                class="learn-more text-decoration-none border border-2 border-dark rounded-5 p-2"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-md-4 rounded-5 p-5 position-relative"
+            style="background-color: #fff; padding-bottom: 20px; height: 70%"
+          >
+            <div class="d-flex justify-content-start align-items-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="whatssap-log"
+                style="width: 50px"
+              />
+            </div>
+            <h4 class="mb-3">
+              Helping you Find More Channels and Businesses on WhatsApp
+            </h4>
+            <p class="text-dark fs-5">
+              Today we’re introducing some new features for our Updates tab,
+              which is home to both Channels and Status. We’ve worked over the
+              last two years to make this tab the place for...
+            </p>
+            <!-- button read more -->
+            <div class="mb-3 mt-5">
+              <a
+                href="#"
+                class="learn-more text-decoration-none border border-2 border-dark rounded-5 p-2"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 rounded-5 p-5 position-relative"
+            style="background-color: #fff; padding-bottom: 20px; height: 70%"
+          >
+            <div class="d-flex justify-content-start align-items-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="whatssap-log"
+                style="width: 50px"
+              />
+            </div>
+            <h4 class="mb-3">
+              Helping you Find More Channels and Businesses on WhatsApp
+            </h4>
+            <p class="text-dark fs-5">
+              Today we’re introducing some new features for our Updates tab,
+              which is home to both Channels and Status. We’ve worked over the
+              last two years to make this tab the place for...
+            </p>
+            <!-- button read more -->
+            <div class="mb-3 mt-5">
+              <a
+                href="#"
+                class="learn-more text-decoration-none border border-2 border-dark rounded-5 p-2"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 rounded-5 p-5"
+            style="background-color: #fff; padding-bottom: 20px; height: 70%"
+          >
+            <div class="d-flex justify-content-start align-items-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="whatssap-log"
+                style="width: 50px"
+              />
+            </div>
+            <h4 class="mb-3">
+              Helping you Find More Channels and Businesses on WhatsApp
+            </h4>
+            <p class="text-dark fs-5">
+              Today we’re introducing some new features for our Updates tab,
+              which is home to both Channels and Status. We’ve worked over the
+              last two years to make this tab the place for...
+            </p>
+            <!-- button read more -->
+            <div class="mb-3 mt-5">
+              <a
+                href="#"
+                class="learn-more text-decoration-none border border-2 border-dark rounded-5 p-2"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 rounded-5 p-5 position-relative"
+            style="background-color: #fff; padding-bottom: 20px; height: 70%"
+          >
+            <div class="d-flex justify-content-start align-items-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="whatssap-log"
+                style="width: 50px"
+              />
+            </div>
+            <h4 class="mb-3">
+              Helping you Find More Channels and Businesses on WhatsApp
+            </h4>
+            <p class="text-dark fs-5">
+              Today we’re introducing some new features for our Updates tab,
+              which is home to both Channels and Status. We’ve worked over the
+              last two years to make this tab the place for...
+            </p>
+            <!-- button read more -->
+            <div class="mb-3 mt-5">
+              <a
+                href="#"
+                class="learn-more text-decoration-none border border-2 border-dark rounded-5 p-2"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer WhatsApp-style -->
+      <footer
+        class="pt-5 pb-3 text-white container-fluid"
+        style="background-color: #111b21; margin-top: 30px"
+      >
+        <div class="container">
+          <div class="row">
+            <!-- Colonne Logo + Download -->
+            <div class="col-md-3 mb-4">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center gap-3 text-center"
+              >
+                <!-- Logo et titre -->
+                <div class="d-flex align-items-center gap-2">
+                  <h4 class="mb-0">
+                    WhatsApp
+                    <span>
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                        alt="whatsapp-logo"
+                        style="width: 30px; height: auto"
+                      />
+                    </span>
+                  </h4>
+                </div>
+
+                <!-- Bouton -->
+                <button class="btn btn-success rounded-pill px-4 py-2">
+                  Download <span class="ms-1">&#8681;</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Colonne 1: What we do -->
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase text-muted">What we do</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Features</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-underline"
+                    >Security</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >For Business</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Colonne 2: Who we are -->
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase text-muted">Who we are</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Brand Center</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Privacy</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Colonne 3: Use WhatsApp -->
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase text-muted">Use WhatsApp</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Android</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none">iPhone</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none">Mac/PC</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >WhatsApp Web</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Colonne 4: Need Help -->
+            <div class="col-md-3 mb-3">
+              <h6 class="text-uppercase text-muted">Need Help?</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Help Center</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none">Apps</a>
+                </li>
+                <li>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Security Advisories</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="border-secondary my-4" />
+
+          <!-- Bas du footer -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="text-muted small mb-2 mb-md-0">
+              2025 © WhatsApp LLC &nbsp; &nbsp;
+              <a href="#" class="text-white text-decoration-none me-3"
+                >Terms & Privacy Policy</a
+              >
+              <a href="#" class="text-white text-decoration-none">Sitemap</a>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="d-flex align-items-center mb-2 mb-md-0">
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle me-2"
+              >
+                <i class="bi bi-x"></i>
+              </a>
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle me-2"
+              >
+                <i class="bi bi-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle me-2"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm rounded-circle">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>
+
+            <!-- Sélecteur de langue -->
+            <div>
+              <select
+                class="form-select form-select-sm bg-dark text-white border-secondary"
+              >
+                <option selected>English</option>
+                <option>Français</option>
+                <option>Español</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Fonction pour faire défiler le conteneur vers la gauche
+      const container = document.getElementById("scrollContainer");
+      const scrollAmount = 350;
+
+      document.getElementById("scrollLeft").addEventListener("click", () => {
+        container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      document.getElementById("scrollRight").addEventListener("click", () => {
+        container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ60X9G33dJjZgkRUUHxWCDC1muWAICR-Oodw&s");
+}
+
+
+div:nth-of-type(1) input{
+    margin-top: 30px;
+    border: 2px solid #ddd;
+    padding: 15px;
+    width: 800px;
+    border-radius: 10px;
+}
+div:nth-of-type(1) input:focus{
+    border: none;
+    outline: none;
+    border: 2px solid #ddd;
+
+}
+div:nth-of-type(1) label{
+    color: gray;
+    font-size: 35px;
+
+}
+
+
+.input-btn{
+  
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: tomato;
+    text-align: center;
+}
+.input-btn{
+    top: 50%;
+    right: 20%;
+}
+.input-btn button{
+     color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+
+/* link-container */
+
+.link-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link-container ul li{
+    list-style:disc;
+    color: #858282;
+    font-size: 20px;
+}
+.link-container ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #858282;
+}
+
+/* media */
+
+@media (max-width: 768px ) {
+     div:nth-of-type(1) input{
+        max-width: 500px;
+     }
+     .input-btn {
+        right: 15px;
+     }
+     .input-btn{
+        font-size: 13px;
+     }
+     .link-container{
+        flex-direction: row;
+        padding: 10px 50px ;
+        margin-top: 10px;
+     }
+    
+}
+
+
+/* workin-renowned */
+
+.workin-renowned{
+    padding-bottom: 40px;
+    background-image: url("https://us.123rf.com/450wm/bebuntoon/bebuntoon2108/bebuntoon210800202/172992500-abstrait-or-luxueux-couleur-vecteur-cercle-demi-teinte-arri%C3%A8re-plan-conception-de-motif-de-ligne.jpg?ver=6");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-tomato{
+    color: tomato;
+    font-weight: bold;
+}
+
+.star-icone{
+    color: tomato;
+    fill: tomato;
+}
+
+ /* footer */
+
+ footer{
+    background-color: rgb(233, 88, 62);
+ }
+
+ .dropdown:hover .dropdown-menu {
+  display: block;
+  transition:  border-bottom 1s ease-in-out;
+}
+.dropdown-menu{
+    box-shadow: 4px 4px 20px rgb(244, 135, 116);
+    border: none;
+}
+.dropdown-menu a{
+    text-align: center;
+    font-size: 14px;
+}
+.dropdown-menu a:hover{
+    color: rgb(233, 88, 62);
+    text-decoration: underline;
+    background-color: transparent;
+}
+ footer .border-bott:hover{
+border-bottom: 1px solid white;
+ }
+
+ .privacy-section a{
+    font-size: 10px;
+    color: white;
+    transition:  text-decoration 1s ease-in-out;
+    
+ }
+ .privacy-section a:hover{
+    text-decoration: underline !important;
+ }
+
+ /* icone footer */
+
+ footer a i{
+    color: #ddd;
+    font-size: 15px;
+
+ }
+ footer a i:hover{
+    color: white;
+ }
+
+section i{
+    font-size: 30px;
+}
+ /* section hr{
+   height: 4px;
+   background-color: beige;
+   opacity: 0.5;
+ } */
+ .container-hover{
+    position: relative;
+ }
+
+
+
+
+
+ /* .hr-hover{
+   height: 4px;
+   background-color: beige;
+   opacity: 0.5;
+   position: relative;
+   content: '';
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   margin: 10px 0;
+   transition: all 0.5s ease-in-out;
+   overflow: hidden;
+ }
+ .hr-hover::after{
+   position: absolute;
+   content: '';
+   top: -10px;
+   left: 0px;
+   width: 0%;
+   height: 100%;
+   background-color: white !important;
+   margin: 10px 0px;
+   opacity: 1;
+   transition: all 0.5s ease-in-out;
+   z-index: 2;
+ }
+.container-hover:hover .hr-hover::after{
+    background-color: white !important;
+    opacity: 1;
+    width: 100px;
+    z-index: 1;
+ } */
+
+ .container-hover {
+  position: relative;
+}
+
+.hr-hover {
+  height: 4px;
+  background-color: beige;
+  opacity: 0.5;
+  position: relative;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.hr-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  transition: width 0.5s ease-in-out;
+  z-index: 1;
+  display: block;
+}
+
+.container-hover:hover .hr-hover::after {
+  width: 100px;
+}
+
+ /* navbar footer */
+ .btn-hide::after{
+    display: none !important;
+ }
+
+ /* navbar offcanva */
+ .offcanvas-body  a:hover{
+    color: rgb(233, 88, 62) !important;
+ }
+.offcanvas-center {
+  width: 500px !important;
+}
+
+.offcanvas-center hr{
+    background-color: tomato;
+    height: 2px;
+    border: none;
+}
+
+/* Hamburger */
+.Hamburger{
+    position: absolute;
+    right: -25px;
+    top: 3px;
+}
+
+
+
