@@ -35,7 +35,10 @@
       <i class="fas fa-arrow-left"></i> Retour
     </a>
     <!-- navbar of whasapp -->
-    <nav class="navbar navbar-expand-lg shadow-lg fixed-top">
+    <nav
+      class="navbar navbar-expand-lg shadow-lg fixed-top"
+      style="position: relative"
+    >
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand fw-bold" href="#">
@@ -43,7 +46,7 @@
             src="images/logo.png"
             class="img-fluid"
             alt="logo"
-            style="height: 20px;position: absolute;top: 20px;left: 0px; "
+            style="height: 20px; position: absolute; top: 20px; left: 0px"
           />
         </a>
 
@@ -63,12 +66,10 @@
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Liens de gauche -->
-          <ul
-            class="navbar-nav  mb-lg-0 d-flex align-items-center gap-lg-4"
-          >
+          <ul class="navbar-nav mb-lg-0 d-flex align-items-center gap-lg-4">
             <li class="nav-item">
               <a
-                class="nav-link nav-underline active text-md-nowrap d-flex ms-5 "
+                class="nav-link nav-underline active text-md-nowrap d-flex ms-5"
                 href="#"
               >
                 Features <i class="bi bi-chevron-down"></i>
@@ -89,30 +90,36 @@
                 >Blog</a
               >
             </li>
-          </ul>       
+          </ul>
 
           <!-- Liens de droite -->
-          <ul class="navbar-nav d-flex align-items-center gap-lg-4">
+          <ul
+            class="navbar-nav d-flex align-items-center gap-lg-4"
+            style="position: relative"
+          >
             <li class="nav-item">
               <a
                 class="nav-link nav-underline border-end pe-3 text-md-nowrap d-flex"
                 href="#"
-                >For Business</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-underline text-md-nowrap d-flex" href="#"
-                >Apps</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark text-md-nowrap d-flex" href="#">
-                Log in <i class="bi bi-chevron-compact-right"></i>
+                >For Business
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link nav-underline text-md-nowrap d-flex" href="#"
+                >Apps
+              </a>
+            </li>
+            <li class="nav-item pb-5">
               <a
-                class="nav-link btn btn-primary text-white px-4 text-md-nowrap d-flex"
+                class="nav-link text-md-nowrap d-flex animed-link mb-5"
+                href="#"
+              >
+                Log in <i class="bi bi-chevron-compact-right"></i>
+              </a>
+            </li>
+            <li class="nav-item pb-5">
+              <a
+                class="nav-link px-4 text-md-nowrap d-flex animed-link ms-5 mb-5"
                 href="#"
               >
                 Download <i class="bi bi-download"></i>
@@ -241,33 +248,33 @@
     >
       <div
         class="container py-5 position-relative z-2 mt-5 d-flex justify-content-center align-items-center"
-        style="height: 600px"
+        style="height: 600px; max-height: 100%"
       >
         <!-- images en haut -->
         <img
           src="https://randomuser.me/api/portraits/men/96.jpg"
           class="floating-img"
-          style="bottom: 80%; left: 20%; width: 40px"
+          style="bottom: 80%; left: 20%; height: 40px"
         />
         <img
           src="https://randomuser.me/api/portraits/women/35.jpg"
           class="floating-img"
-          style="bottom: 80%; right: 30%; width: 40px"
+          style="bottom: 80%; right: 30%; height: 40px"
         />
         <img
           src="https://randomuser.me/api/portraits/women/59.jpg"
           class="floating-img"
-          style="bottom: 80px; left: 20%; width: 40px"
+          style="bottom: 80px; left: 20%; height: 40px"
         />
         <img
           src="https://randomuser.me/api/portraits/men/22.jpg"
           class="floating-img"
-          style="bottom: 70px; right: 15%; width: 40px"
+          style="bottom: 70px; right: 15%; height: 40px"
         />
         <img
           src="https://randomuser.me/api/portraits/women/89.jpg"
           class="floating-img"
-          style="top: 120px; left: 50%; width: 40px"
+          style="top: 120px; left: 50%; height: 40px"
         />
 
         <!-- Bulles de messages -->
@@ -320,56 +327,58 @@
       <img
         src="https://randomuser.me/api/portraits/women/11.jpg"
         class="floating-img"
-        style="bottom: 40px; left: 25%; width: 40px"
+        style="bottom: 40px; left: 25%; height: 40px"
       />
       <img
         src="https://randomuser.me/api/portraits/men/13.jpg"
         class="floating-img"
-        style="bottom: 60px; right: 22%; width: 40px"
+        style="bottom: 60px; right: 22%; height: 40px"
       />
       <img
         src="https://randomuser.me/api/portraits/women/21.jpg"
         class="floating-img"
-        style="bottom: 80px; left: 20%; width: 40px"
+        style="bottom: 80px; left: 20%; height: 40px"
       />
       <img
         src="https://randomuser.me/api/portraits/women/34.jpg"
         class="floating-img"
-        style="bottom: 70px; left: 15%; width: 40px"
+        style="bottom: 70px; left: 15%; height: 40px"
       />
       <img
         src="https://randomuser.me/api/portraits/men/44.jpg"
         class="floating-img"
-        style="bottom: 120px; left: 50%; width: 40px"
+        style="bottom: 120px; left: 50%; height: 40px"
       />
     </section>
 
     <!--toisieme div  -->
-    <div class="contain mt-5">
+    <div class="container mt-5">
       <div
-        class="row justify-content-center flex-md-nowrap align-items-center p-2 flex-wrap"
+        class="row justify-content-center flex-wrap align-items-center p-2 flex-wrap"
       >
-        <div class="col col-md-7 me-auto">
-          <div style="padding: 15%">
-            <h1 style="font-size: 50px">
-              Never miss a <br />moment with <br />
-              voice and <br />video calls
-            </h1>
-            <p class="text-small mt-3 fs-5">
-              From a group call to classmates to a quick call with mom, <br />
-              feel like you’re in the same room with voice and <br />video
-              calls.
-            </p>
+        <div class="col col-md-6">
+          <h1 style="font-size: 50px">
+            Never miss a moment with voice and video calls
+          </h1>
+          <p class="text-small mt-3 fs-5">
+            From a group call to classmates to a quick call with mom, feel like
+            you’re in the same room with voice and video calls.
+          </p>
 
-            <a href="" class="learn-more-1">Learn more</a>
-            <i class="bi bi-chevron-compact-right"></i>
-          </div>
+          <a href="" class="learn-more-1">Learn more</a>
+          <i class="bi bi-chevron-compact-right"></i>
         </div>
-        <div class="col col-md-5">
+        <div class="col col-md-6">
           <img
             src="images/whasap profile.png"
-            class="img-fluid w-50 h-50"
+            class="img-fluid"
             alt="image"
+            style="
+              height: 100%;
+              max-height: 550px;
+              max-width: 380px;
+              width: 100%;
+            "
           />
         </div>
       </div>
@@ -379,7 +388,7 @@
 
     <div class="container-fluid mt-5 Speak-freely">
       <div
-        class="row justify-content-center align-items-center mx-auto gap-4 flex-md-nowrap p-2 text-white flex-wrap"
+        class="row justify-content-center align-items-center mx-auto gap-4 flex-wrap flex-md-nowrap p-2 text-white flex-wrap"
       >
         <!-- Colonne image -->
         <div class="col-12 col-md-6 text-center text-md-start">
@@ -391,11 +400,11 @@
         </div>
 
         <!-- Colonne texte -->
-        <div class="col-12 col-md-6">
-          <h1 class="fw-bold">
+        <div class="col-12 col-md-6 text-sm-center">
+          <h1 class="fw-bold display-4">
             Speak <br /><span style="color: green">freely</span>
           </h1>
-          <p class="mt-3">
+          <p class="mt-3 fs-5 -3">
             With end-to-end encryption on WhatsApp, your personal <br />
             messages and calls are secured with a lock. Only you <br />
             and the person you're talking to can read or listen to <br />
@@ -413,27 +422,33 @@
       <div
         class="row justify-content-center flex-md-nowrap align-items-center p-2 flex-wrap"
       >
-        <div class="col col-md-7 me-auto">
-          <div style="padding: 15%">
-            <h1 style="font-size: 50px">
-              Keep in touch <br />
-              with your groups
-            </h1>
-            <p class="text-small mt-3 fs-5">
-              Whether it's planning an outing with friends or simply <br />
-              staying on top of your family chats, group conversations <br />
-              should feel effortless.
-            </p>
+        <div class="col col-md-7">
+          <h1 style="font-size: 50px">
+            Keep in touch <br />
+            with your groups
+          </h1>
+          <p class="text-small mt-3 fs-5">
+            Whether it's planning an outing with friends or simply <br />
+            staying on top of your family chats, group conversations <br />
+            should feel effortless.
+          </p>
 
-            <a href="" class="learn-more-1">Learn more</a>
-            <i class="bi bi-chevron-compact-right"></i>
-          </div>
+          <a href="" class="learn-more-1">Learn more</a>
+          <i class="bi bi-chevron-compact-right"></i>
         </div>
         <div class="col col-md-5">
           <img
-          src="https://static.vecteezy.com/system/resources/previews/013/473/360/non_2x/template-interface-whatsapp-on-your-phone-smartphone-chat-whatsapp-free-vector.jpg"
-          class="img-fluid w-100 rounded-4 me-5" " alt="image"
-          style="min-height: 500px; margin-left: 15px;" />
+            src="https://static.vecteezy.com/system/resources/previews/013/473/360/non_2x/template-interface-whatsapp-on-your-phone-smartphone-chat-whatsapp-free-vector.jpg"
+            class="img-fluid w-100 rounded-4 me-5"
+            alt="image"
+            style="
+              min-height: 500px;
+              min-width: 450px;
+              width: 100%;
+              height: 100%;
+              margin-left: 15px;
+            "
+          />
         </div>
       </div>
     </div>
@@ -441,23 +456,25 @@
     <!--  -->
 
     <div class="container mt-5">
-      <div
-        class="row justify-content-center align-items-center mx-auto gap-4 flex-md-nowrap p-2 text-dark w-100 h-100 flex-wrap"
-      >
+      <div class="row justify-content-center align-items-center mx-auto p-2">
         <!-- Colonne image -->
-        <div class="col-12 col-md-6 text-center text-md-start">
+        <div class="col-12 col-md-6 text-center text-md-start pe-0 pe-md-5">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUOMrR5lO-4kk805PfoeNdXWaMM-HUMEyhuw&s"
             class="img-fluid rounded-5"
             alt="whatsapp background"
-            style="min-height: 500px"
+            style="
+              min-height: 400px;
+              height: 100%;
+              min-width: 380px;
+              width: 100%;
+            "
           />
         </div>
         <!-- Colonne texte -->
-        <div class="col-12 col-md-6">
-          <h1 class="fw-bold" style="font-size: 50px">
-            Say what <br />
-            you feel
+        <div class="col-12 col-md-6 ps-2 ps-md-5">
+          <h1 class="fw-bold mt-2 mt-sm-4" style="font-size: 50px">
+            Say what you feel
           </h1>
           <p class="mt-3 fs-5">
             Express yourself without words. Use stickers and GIFs or <br />
@@ -476,29 +493,27 @@
       <div
         class="row justify-content-center flex-wrap flex-md-nowrap align-items-center p-3 position-relative"
       >
-        <div class="col col-md-7 me-auto position-relative">
-          <div style="padding: 15%">
-            <h1 style="font-size: 50px">
-              Transform <br />
-              your business
-            </h1>
-            <p class="text-small mt-3 fs-5">
-              WhatsApp Business helps you reach your customers <br />
-              globally to deliver compelling experiences at scale. <br />
-              Showcase your products and services, increase sales,<br />
-              and build relationships all with WhatsApp.
-            </p>
+        <div class="col col-md-7 position-relative">
+          <h1 style="font-size: 50px">
+            Transform <br />
+            your business
+          </h1>
+          <p class="text-small mt-3 fs-5">
+            WhatsApp Business helps you reach your customers <br />
+            globally to deliver compelling experiences at scale. <br />
+            Showcase your products and services, increase sales,<br />
+            and build relationships all with WhatsApp.
+          </p>
 
-            <a href="" class="learn-more-1">Learn more</a>
-            <i class="bi bi-arrow-up-right fs-2 fw-bold"></i>
-          </div>
+          <a href="" class="learn-more-1">Learn more</a>
+          <i class="bi bi-arrow-up-right fs-2 fw-bold"></i>
         </div>
         <div class="col col-md-5">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrriQlxJ8Wiv-VLizaAWHRHOSAZTqr_qsvc8qEUDZvC0cZpaL7XXN7S_i48DTnNx9bLcY&usqp=CAU"
             class="img-fluid w-100 rounded-5 me-5"
             alt="image"
-            style="min-height: 500px; margin-left: 15px"
+            style="min-height: 500px; min-width: 450px; margin-left: 15px"
           />
         </div>
       </div>
@@ -700,36 +715,35 @@
         style="background-color: #111b21; margin-top: 30px"
       >
         <div class="container">
-          <div class="row">
+          <div
+            class="row d-flex justify-content-content-centent align-items-center"
+          >
             <!-- Colonne Logo + Download -->
-            <div class="col-md-3 mb-4">
-              <div
-                class="d-flex flex-column justify-content-center align-items-center gap-3 text-center"
-              >
-                <!-- Logo et titre -->
-                <div class="d-flex align-items-center gap-2">
-                  <h4 class="mb-0">
-                    WhatsApp
-                    <span>
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                        alt="whatsapp-logo"
-                        style="width: 30px; height: auto"
-                      />
-                    </span>
-                  </h4>
-                </div>
-
-                <!-- Bouton -->
-                <button class="btn btn-success rounded-pill px-4 py-2">
-                  Download <span class="ms-1">&#8681;</span>
-                </button>
+            <div class="col col-md-2 position-relative">
+              <!-- Logo et titre -->
+              <div class="">
+                <h6 class="text-uppercase text-white">WhatsApp</h6>
+                <span class="position-absolute" style="left: -9px; top: -10px">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="whatsapp-logo"
+                    class="img-fluid"
+                    style="height: 30px"
+                  />
+                </span>
               </div>
+
+              <!-- Bouton -->
+              <button
+                class="btn btn-success rounded-5 px-3 py-2 px-sm-2 py-sm-1 mt-5"
+              >
+                Download <i class="bi bi-arrow-right-short"></i>
+              </button>
             </div>
 
             <!-- Colonne 1: What we do -->
-            <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase text-muted">What we do</h6>
+            <div class="col col-md-2 mb-3">
+              <h6 class="text-uppercase text-white small">What we do</h6>
               <ul class="list-unstyled">
                 <li>
                   <a href="#" class="text-white text-decoration-none"
@@ -753,8 +767,8 @@
             </div>
 
             <!-- Colonne 2: Who we are -->
-            <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase text-muted">Who we are</h6>
+            <div class="col col-md-2 mb-3">
+              <h6 class="text-uppercase text-white small">Who we are</h6>
               <ul class="list-unstyled">
                 <li>
                   <a href="#" class="text-white text-decoration-none"
@@ -780,8 +794,8 @@
             </div>
 
             <!-- Colonne 3: Use WhatsApp -->
-            <div class="col-md-2 mb-3">
-              <h6 class="text-uppercase text-muted">Use WhatsApp</h6>
+            <div class="col col-md-3 mb-3">
+              <h6 class="text-uppercase text-white small">Use WhatsApp</h6>
               <ul class="list-unstyled">
                 <li>
                   <a href="#" class="text-white text-decoration-none"
@@ -803,8 +817,8 @@
             </div>
 
             <!-- Colonne 4: Need Help -->
-            <div class="col-md-3 mb-3">
-              <h6 class="text-uppercase text-muted">Need Help?</h6>
+            <div class="col col-md-3 mb-3">
+              <h6 class="text-uppercase text-white">Need Help?</h6>
               <ul class="list-unstyled">
                 <li>
                   <a href="#" class="text-white text-decoration-none"
@@ -832,9 +846,9 @@
 
           <!-- Bas du footer -->
           <div
-            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center flex-wrap align-items-sm-center"
           >
-            <div class="text-muted small mb-2 mb-md-0">
+            <div class="text-muted small mb-2 mb-md-0 text-sm-start mb-sm-4">
               2025 © WhatsApp LLC &nbsp; &nbsp;
               <a href="#" class="text-white text-decoration-none me-3"
                 >Terms & Privacy Policy</a
@@ -843,7 +857,17 @@
             </div>
 
             <!-- Réseaux sociaux -->
-            <div class="d-flex align-items-center mb-2 mb-md-0">
+            <div class="d-flex align-items-center mb-2 mb-md-0 gap-3">
+              <!-- langues section -->
+              <div>
+                <select
+                  class="form-select form-select-sm bg-dark text-white border-secondary"
+                >
+                  <option selected>English</option>
+                  <option>Français</option>
+                  <option>Español</option>
+                </select>
+              </div>
               <a
                 href="#"
                 class="btn btn-outline-light btn-sm rounded-circle me-2"
@@ -868,15 +892,6 @@
             </div>
 
             <!-- Sélecteur de langue -->
-            <div>
-              <select
-                class="form-select form-select-sm bg-dark text-white border-secondary"
-              >
-                <option selected>English</option>
-                <option>Français</option>
-                <option>Español</option>
-              </select>
-            </div>
           </div>
         </div>
       </footer>
