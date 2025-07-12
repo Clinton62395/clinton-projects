@@ -31,6 +31,18 @@
     color: #fff;
   }
 
+  /* frontend links */
+  .dropdown:hover .dropdown-menu{
+    display: block;
+    font-size: 14px !important;
+    margin-top: 35px;
+  }
+  .dropdown .dropdown-menu a:hover{
+        color: tomato !important;
+        font-weight: bold;
+        background-color: black;
+
+  }
 
       body::-webkit-scrollbar {
         display: none;

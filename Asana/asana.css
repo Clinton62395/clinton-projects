@@ -33,6 +33,18 @@
     color: #fff;
   }
 
+  /* frontend projects links */
+
+  .dropdown:hover .dropdown-menu{
+    display: block;
+    font-size: 14px !important;
+  }
+  .dropdown .dropdown-menu a:hover{
+        color: tomato !important;
+        font-weight: bold;
+        background-color: black;
+  }
+
 
 
       .navbar {

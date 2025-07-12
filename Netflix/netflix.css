@@ -38,6 +38,11 @@
     align-items: center;
     margin:10px 30px ;
  }
+
+ /* all frontend project site */
+ .dropdown:hover .dropdown-menu{
+  display: block;
+ }
  
  
  .background {

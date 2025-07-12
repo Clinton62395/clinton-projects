@@ -1,0 +1,566 @@
+ /* retour btn */
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+  .btn-back-fixed {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #010710c6;
+    color: rgb(242, 241, 241);
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .btn-back-fixed i {
+    margin-right: 8px;
+  }
+
+  .btn-back-fixed:hover {
+    background-color: #084298;
+    transform: translateY(-2px);
+    color: #fff;
+  }
+
+  /* frontend project link */
+.dropdown{
+  z-index: 1000;
+}
+  .dropdown:hover .dropdown-menu{
+    display: block;
+    font-size: 14px !important;
+  }
+  .dropdown .dropdown-menu a:hover{
+        color: tomato !important;
+        font-weight: bold;
+        background-color: black;
+  }
+
+
+
+.airbnb-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 30px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+/* .nav-center span:hover{
+transform: scale(1.1) scaleZ(1.1);
+} */
+
+.nav-center li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #484848;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-center li img {
+  height: 30px;
+  margin-bottom: 4px;
+}
+
+.nav-center li .badge {
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  background-color: #22335e;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.nav-center li.active .underline {
+  width: 80%;
+  height: 2px;
+  background-color: black;
+  margin-top: 4px;
+  border-radius: 1px;
+}
+
+.text-hover{
+  color: #7b7a7a;
+}
+.text-hover:hover{
+  color: black;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.host {
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.host:hover {
+display: inline-flex;
+  background-color: #e3e0e0;
+  border-radius: 50px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.icon-circle:hover{
+  background-color: #ddd;
+  display: inline-block;
+}
+/* experience and service moving forward hover */
+.move-forward{
+  transition: transform 0.5s ease-in-out;
+}
+.move-forward:hover{
+  transform: scale(1.5);
+}
+
+
+/* media queries */
+
+@media (max-width: 576px) {
+  .host {
+    display: none;
+  }
+
+  .nav-right {
+    display: none;
+  }
+}
+/* airbnb-navbar-second */
+.airbnb-navbar-second {
+  position: relative;
+  margin: 10px auto;
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f7f7f7;
+  border-radius: 50px;
+  padding: 10px 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.input-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-right: 2px solid rgba(128, 128, 128, 0.137);
+}
+.input-div:last-child {
+  border-right: none;
+}
+.input-div:nth-of-type(4) {
+  border-right: none;
+}
+
+
+
+.input-div input {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+.input-div input::placeholder{
+  text-align: center;
+}
+
+.input-div:hover {
+  height: 60px;
+  background-color: #ddd;
+  border-radius: 50px;
+}
+
+.search-icon{
+  position: absolute;
+  right: 10px; 
+  background-color: #ff385c;
+  border: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.search-icon:hover {
+  background-color: rgb(244, 6, 6);
+}
+.search-icon button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-icon .bi{
+  color: white;
+  font-size: 20px;
+}
+
+.search-btn i {
+  font-size: 16px;
+}
+.input-div label {
+  font-size: 12px;
+  text-align: center;
+  color: #484848;
+  font-weight: 500;
+}
+
+/* scrool button */
+
+#right-button , #left-button {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button:hover, #left-button:hover {
+  background-color: #ddd;
+}
+
+#right-button{
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+/* second scrool button */
+#right-button-2 , #left-button-2 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-2:hover, #left-button-2:hover {
+  background-color: #ddd;
+}
+
+#right-button-2 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-2 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
+/* third scroll button */
+#right-button-3 , #left-button-3 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-3:hover, #left-button-3:hover {
+  background-color: #ddd;
+}
+#right-button-3 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-3 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+/* fourth scroll button */
+#right-button-4 , #left-button-4 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-4:hover, #left-button-4:hover {
+  background-color: #ddd;
+}
+#right-button-4 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-4 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+/* fifth scroll button */
+#right-button-5 , #left-button-5 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-5:hover, #left-button-5:hover {
+  background-color: #ddd;
+}
+#right-button-5 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-5 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+/* sixth scroll button */
+#right-button-6 , #left-button-6 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-6:hover, #left-button-6:hover {
+  background-color: #ddd;
+}
+#right-button-6 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-6 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+/* seventh scroll button */
+#right-button-7 , #left-button-7 {
+  background-color: #f7f7f7;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#right-button-7:hover, #left-button-7:hover {
+  background-color: #ddd;
+}
+#right-button-7 {
+  right: 40px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+#left-button-7 {
+  right: 80px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+
+i {
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+
+}
+/* text et coeur sur l'image */
+
+.guest-favorite {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  top: 10px;
+  left:5px;
+  background-color: #e1dfdf;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+.bi-heart {
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  left: 85%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.bi-heart:hover {
+  transform: scale(1.2);
+}
+
+/*  */
+
+.contenu-card a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #6c757d;
+}
+.contenu-card a:hover {
+  color: #000;
+}
+
+
+/* collapse button */
+.collapse-btns button{  
+ border: none;
+ outline: none;
+}
+.collapse-btns a {
+ border: none;
+ outline: none;
+}
+.collapse-btns button:focus{
+  border-bottom: 2px solid #010000;
+  border-radius: 0;
+}
+.collapse-btns a:focus{
+  border-bottom: 2px solid #010000;
+  border-radius: 0;
+}
+
+/* footer */
+
+footer a{
+  text-decoration: none;
+  color: #000305;
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 0;
+  transition: text-decoration 0.3s ease;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer h5 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000305;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* footer-icone */
+.footer-icone a{
+  text-decoration: none;
+  color: #000305;
+  font-size: 16px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+.footer-icone a:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease;
+}
+.footer-icone> .col:nth-of-type(2) a:nth-of-type(1):hover,
+.footer-icone> .col:nth-of-type(2) a:nth-of-type(2):hover{
+  text-decoration: none;
+}
+.icone{
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display:inline-flex;
+  transition: backround-color 0.3s ease;
+}
+.icone:hover{
+background-color: #7e7c7c;
+}

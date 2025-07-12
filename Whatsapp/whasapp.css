@@ -445,6 +445,19 @@ footer ul li :hover a{
   top: 55%;
 }
 
+.dropdown{
+  margin-right: 10px;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    font-size: 14px !important;
+    text-align: start;
+  }
+  .dropdown .dropdown-menu a:hover{
+        color: tomato !important;
+        font-weight: bold;
+        background-color: black;
+  }
 
 /* hover , remplier du bas en haut */
 
