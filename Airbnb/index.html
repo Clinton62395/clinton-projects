@@ -34,10 +34,10 @@
   </head>
   <body <!-- navbar de airbnb -->
     <!-- Bouton retour -->
-    <a href="../../index.html" class="btn-back-fixed">
+    <!-- <a href="../../index.html" class="btn-back-fixed">
       <i class="fas fa-arrow-left"></i> Retour
-    </a>
-    <nav class="airbnb-navbar">
+    </a> -->
+    <nav class="airbnb-navbar" style="position: relative">
       <!-- Left: Logo -->
       <div class="logo">
         <img
@@ -53,25 +53,91 @@
             src="https://em-content.zobj.net/source/apple/391/house_1f3e0.png"
             alt="home"
           />
-          <span>Homes</span>
+          <h6 class="fw-bold">Homes</h6>
           <div class="underline"></div>
         </li>
         <li>
           <img
             src="https://cdn-icons-png.flaticon.com/512/702/702797.png"
             alt="balloon"
+            class="move-forward"
           />
-          <span>Experiences</span>
+
+          <span class="text-hover">Experiences</span>
           <span class="badge">NEW</span>
         </li>
         <li>
           <img
             src="https://em-content.zobj.net/source/apple/391/bellhop-bell_1f6ce-fe0f.png"
             alt="services"
+            class="move-forward"
           />
-          <span>Services</span>
+          <span class="text-hover">Services</span>
           <span class="badge">NEW</span>
         </li>
+
+        <!--  -->
+        <div class="dropdown ms-5">
+          <button
+            class="btn btn-dark dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            More
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <a class="dropdown-item small" href="/Airbnb/index.html">
+                <i class="bi bi-film"></i> Airbnb
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Netflix/index.html">
+                <i class="bi bi-film"></i> NETFLIX
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Asana/index.html">
+                <i class="bi bi-kanban"></i> ASANA
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Khan-academy/index.html">
+                <i class="bi bi-book"></i> KHAN-ACADEMY
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Whatsapp/index.html">
+                <i class="bi bi-chat-dots"></i> WHATSAPP
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/Pinterest/index.html">
+                <i class="bi bi-image"></i> PINTEREST
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Neipatel/index.html">
+                <i class="bi bi-graph-up"></i> NEIPATEL
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item small" href="/Dropbox/index.html">
+                <i class="bi bi-cloud-arrow-down"></i> DROPBOX
+              </a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+
+            <li>
+              <a
+                class="dropdown-item small"
+                href="https://clinton-portfolio-five.vercel.app"
+              >
+                <i class="bi bi-person-badge"></i> MY PORTFOLIO
+              </a>
+            </li>
+          </ul>
+        </div>
       </ul>
 
       <!-- Right: Host & Icons -->
@@ -80,18 +146,6 @@
         <div class="icon-circle"><i class="bi bi-globe"></i></div>
         <div class="icon-circle"><i class="bi bi-list"></i></div>
       </div>
-      <button
-        class="btn btn-dark dropdown-toggle"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        More
-      </button>
-      <ul class="dropdown-menu dropdown-menu-dark">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
     </nav>
     <!-- seconde navbar -->
 
