@@ -5,6 +5,10 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+body{
+  overflow-x:hidden;
+}
   .btn-back-fixed {
     position: fixed;
     top: 20px;
