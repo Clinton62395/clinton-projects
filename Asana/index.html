@@ -31,23 +31,33 @@
   </head>
 
   <body>
+    <div
+      class="alert alert-warning alert-dismissible fade show text-center fs-5 w-70"
+      role="alert"
+    >
+      Welcome to my page! This is a simple frontend website for students. It's
+      not supposed to be seen as professional work.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
     <!-- bouton de retour -->
-     <!-- Bouton retour -->
-<!-- <a href="../../index.html" class="btn-back-fixed">
+    <!-- Bouton retour -->
+    <!-- <a href="../../index.html" class="btn-back-fixed">
   <i class="fas fa-arrow-left"></i> Retour
 </a> -->
-
-
 
     <!-- ma nav bar des pages -->
 
     <!-- navbar of asana -->
-    <nav class="navbar navbar-expand-lg bg-light " >
+
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#">
-          <img src="images/asana.png" 
-          alt="logo"
-          style="height: 100px; " />
+          <img src="images/asana.png" alt="logo" style="height: 100px" />
         </a>
         <button
           class="navbar-toggler"
@@ -62,22 +72,267 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="#"
-                >Products <i class="bi bi-chevron-down"></i>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- Products Mega Menu -->
+            <li class="nav-item dropdown mega-menu">
+              <a
+                class="nav-link dropdown-toggle active fw-bold"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products <i class="bi bi-chevron-down"></i>
               </a>
+              <div class="dropdown-menu">
+                <div class="mega-menu-content">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-kanban"></i> Work Management</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-list-task"></i> Projects</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-calendar-event"></i> Timeline</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-diagram-3"></i> Workflows</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-clipboard-data"></i> Dashboards</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-graph-up"></i> Reporting</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-people"></i> Team Collaboration</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-chat-dots"></i> Messages</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-share"></i> Proofing</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-files"></i> Files</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-bell"></i> Notifications</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-person-check"></i> Team Pages</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-robot"></i> AI Features</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-magic"></i> AI Assistant</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-lightbulb"></i> Smart Suggestions</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-clipboard-check"></i> Auto-status
+                        Updates</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-translate"></i> Smart Translations</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-briefcase"></i> Work Intelligence</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mega-menu-highlight">
+                        <h6><i class="bi bi-star"></i> New Feature</h6>
+                        <p class="mb-3">
+                          Discover Asana AI - Your intelligent work companion
+                          that helps you achieve more.
+                        </p>
+                        <a href="#" class="btn btn-sm">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="#"
-                >Solutions <i class="bi bi-chevron-down"></i
-              ></a>
+
+            <!-- Solutions Mega Menu -->
+            <li class="nav-item dropdown mega-menu">
+              <a
+                class="nav-link dropdown-toggle fw-bold"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Solutions <i class="bi bi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu">
+                <div class="mega-menu-content">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-building"></i> By Department</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-megaphone"></i> Marketing</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-gear"></i> Operations</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-laptop"></i> IT</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-box-seam"></i> Product</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-graph-up-arrow"></i> Sales</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-people"></i> HR</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-briefcase"></i> By Use Case</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-bullseye"></i> Campaign Management</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-calendar3"></i> Content Calendar</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-palette"></i> Creative Production</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-flag"></i> Goal Management</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-rocket"></i> Product Launches</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-diagram-2"></i> Strategic Planning</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-building-gear"></i> By Industry</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-mortarboard"></i> Education</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-heart"></i> Healthcare</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-bank"></i> Financial Services</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-shop"></i> Retail</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-tree"></i> Nonprofits</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-cpu"></i> Technology</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mega-menu-highlight">
+                        <h6><i class="bi bi-trophy"></i> Success Stories</h6>
+                        <p class="mb-3">
+                          See how 85% of Fortune 100 companies achieve success
+                          with Asana.
+                        </p>
+                        <a href="#" class="btn btn-sm">View Case Studies</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="#"
-                >Ressources <i class="bi bi-chevron-down"></i
-              ></a>
+
+            <!-- Resources Mega Menu -->
+            <li class="nav-item dropdown mega-menu">
+              <a
+                class="nav-link dropdown-toggle fw-bold"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Resources <i class="bi bi-chevron-down"></i>
+              </a>
+              <div class="dropdown-menu">
+                <div class="mega-menu-content">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-question-circle"></i> Get Help</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-book"></i> Help Center</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-headset"></i> Contact Support</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-chat-square-dots"></i> Community
+                        Forum</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-telephone"></i> Contact Sales</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-life-preserver"></i> Status Page</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-graduation-cap"></i> Learn</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-play-circle"></i> Asana Academy</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-award"></i> Certifications</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-file-text"></i> Project Templates</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-book-half"></i> Best Practices</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-calendar-event"></i> Webinars</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <h6><i class="bi bi-newspaper"></i> Stay Informed</h6>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-journal-text"></i> Blog</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-mic"></i> Podcast</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-megaphone"></i> Product Updates</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-calendar-week"></i> Events</a
+                      >
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-envelope"></i> Newsletter</a
+                      >
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mega-menu-highlight">
+                        <h6><i class="bi bi-download"></i> Resource Hub</h6>
+                        <p class="mb-3">
+                          Access guides, templates, and tools to maximize your
+                          productivity.
+                        </p>
+                        <a href="#" class="btn btn-sm">Explore Resources</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
+
             <li class="nav-item">
               <a class="nav-link fw-bold" href="#">Pricing</a>
             </li>
@@ -86,9 +341,9 @@
           <!-- Liens à droite -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link border-end border-1 fw-bold fs-5" href="#"
-                ><i class="bi bi-globe"></i
-              ></a>
+              <a class="nav-link border-end border-1 fw-bold fs-5" href="#">
+                <i class="bi bi-globe"></i>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold" href="#">Contact Sales</a>
@@ -97,73 +352,103 @@
               <a
                 class="nav-link btn btn-dark bg-dark text-white px-5 fw-bold"
                 href="#"
-                >Get Started</a
+                >Get Started
+              </a>
+            </li>
+
+            <!-- Dropdown More intégré dans la navbar -->
+            <li class="nav-item dropdown me-5 ">
+              <a
+                class="nav-link dropdown-toggle fw-bold btn text-white py-2 bg-dark mx-2 bg-outline-warning"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                More  <i class="bi bi-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/"
+                  >
+                    🏠 Airbnb (Accueil)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Netflix/"
+                  >
+                    <i class="bi bi-film"></i> Netflix
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Whatsapp/"
+                  >
+                    <i class="bi bi-chat-dots"></i> WhatsApp
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Asana/"
+                  >
+                    <i class="bi bi-kanban"></i> Asana
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Khan-academy/"
+                  >
+                    <i class="bi bi-book"></i> Khan Academy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Pinterest/"
+                  >
+                    <i class="bi bi-image"></i> Pinterest
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Neipatel/"
+                  >
+                    <i class="bi bi-graph-up"></i> Neipatel
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton62395.github.io/clinton-projects/Dropbox/"
+                  >
+                    <i class="bi bi-cloud-arrow-down"></i> Dropbox
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item small"
+                    href="https://clinton-portfolio-five.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="bi bi-person-badge"></i> My Portfolio
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-          
         </div>
       </div>
-      <div class="dropdown me-5">
-      <button
-  class="btn btn-dark dropdown-toggle"
-  data-bs-toggle="dropdown"
-  aria-expanded="false"
->
-  More
-</button>
-<ul class="dropdown-menu dropdown-menu-dark me-5 pe-5">
-  
-   <li>
-          <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/">🏠 Airbnb (Accueil)</a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Netflix/">
-        <i class="bi bi-film"></i> Netflix
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Whatsapp/">
-        <i class="bi bi-chat-dots"></i> WhatsApp
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Asana/">
-        <i class="bi bi-kanban"></i> Asana
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Khan-academy/">
-        <i class="bi bi-book"></i> Khan Academy
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Pinterest/">
-        <i class="bi bi-image"></i> Pinterest
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Neipatel/">
-        <i class="bi bi-graph-up"></i> Neipatel
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton62395.github.io/clinton-projects/Dropbox/">
-        <i class="bi bi-cloud-arrow-down"></i> Dropbox
-      </a>
-    </li>
-    <li><hr class="dropdown-divider" /></li>
-    <li>
-      <a class="dropdown-item small" href="https://clinton-portfolio-five.vercel.app" target="_blank">
-        <i class="bi bi-person-badge"></i> My Portfolio
-      </a>
-    </li>
-</ul>
-</div>
-
     </nav>
-
     <!-- first div -->
 
     <div
@@ -532,10 +817,9 @@
           </p>
         </div>
       </div>
-    </div>
 
-    <!-- Section avec le titre -->
-    <!-- <div
+      <!-- Section avec le titre -->
+      <!-- <div
       class="container-fluid mt-5 mb-5 rounded-top-4"
       style="background-color: #b0e0e6"
     >
@@ -569,685 +853,651 @@
       </div>
     </div> -->
 
-    <!--  -->
-    <div
-      class="container-fluid rounded-top-5 border border-secondary border-1 p-3"
-    >
-      <div class="row d-flex justify-content-center align-items-center gap-3">
-        <div class="col-auto">
-          <button class="btn btn-danger rounded-5 fs-5 fw-bold px-4 py-2">
-            Company wide
-          </button>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">
-            Marketing
-          </button>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">
-            Operation wide
-          </button>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">
-            IT
-          </button>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">
-            Product
-          </button>
-        </div>
-      </div>
-
-      <div class="row justify-content-between align-items-center mt-5 mb-5">
-        <div class="col text-start ms-2">
-          <img src="images/Asana-cognitive-load.webp" class="img-fluid" alt="image" />
-        </div>
-        <div class="col col-auto">
-          <h1>Operationalize goals</h1>
-          <ul class="list-unstyled">
-            <li>
-              <i class="bi bi-check-circle-fill"></i> Connect work to company
-              goals
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i> Automate workflows across
-              departments
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i> Report on progress and
-              address bottlenecks
-            </li>
-          </ul>
+      <!--  -->
+      <div
+        class="container-fluid rounded-top-5 border border-secondary border-1 p-3"
+      >
+        <div class="row d-flex justify-content-center align-items-center gap-3">
           <div class="col-auto">
-            <button
-              class="btn btn-outline-dark rounded-5 fs-5 fw-bold px-4 py-2"
-            >
-              See how it works
+            <button class="btn btn-danger rounded-5 fs-5 fw-bold px-4 py-2">
+              Company wide
             </button>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!--  -->
-    <div
-      class="container-fluid mx-auto rounded-top-4 mt-5 mb-5"
-      style="background-color: #b0e0e6; height: 150vh; padding-top: 50px"
-    >
-      <h1 class="fs-1 fw-bold text-start ms-5" style="color: darkblue">
-        What sets Asana apart
-      </h1>
-      <div
-        class="row d-flex justify-content-center align-items-center gap-3 mt-2 mb-5 mx-5"
-        style="height: 90%"
-      >
-        <div
-          class="col rounded-3 p-5"
-          style="background-color: darkblue; height: 90%"
-        >
-          <h1 class="text-light fw-bold">More clarity and accountability</h1>
-
-          <p class="text-small text-center text-white">
-            Connect strategic goals to the teams that help achieve them. See
-            progress in real time, update stakeholders, and keep the company on
-            track.
-          </p>
-          <img
-            src="data:image/png;base64,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"
-            alt=""
-          />
-          <div class="d-flex justify-content-start" style="margin-top: 40%">
-            <button
-              class="btn btn-secondary rounded-5 fs-5 p-5 fw-bold px-4 py-2 mb-2"
-            >
-              Learn about goals
+          <div class="col-auto">
+            <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">
+              Marketing
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">
+              Operation wide
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-secondary rounded-5 fs-5 fw-bold px-4 py-2">
+              IT
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-2">
+              Product
             </button>
           </div>
         </div>
 
-        <div
-          class="col rounded-3 p-5"
-          style="background-color: darkblue; height: 90%"
-        >
-          <h1 class="text-light fw-bold">Amplify your impact with AI</h1>
-
-          <p class="text-small text-center text-white">
-            Work smarter and faster with AI-powered workflows that take on your
-            teams’ busywork.
-          </p>
-          <img
-            src="data:image/png;base64,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"
-            alt=""
-          />
-          <div class="d-flex justity-content-start" style="margin-top: 40%">
-            <button
-              class="btn btn-outline-success rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
-            >
-              Meet Asana AI
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div
-          class="row d-flex justify-content-center align-items-center mt-5 mb-5"
-        >
-          <div
-            class="col text-start d-flex justify-content-start align-items-center gap-3"
-          >
-            <div>
-              <img
-                src="GDPR (2).png"
-                class="img-fluid w-100 my-image-logo"
-                alt="gdpr logo"
-              />
-            </div>
-            <div>
-              <img
-                src="ISO (2).png"
-                class="img-fluid w-100 my-image-logo"
-                alt="iso logo"
-              />
-            </div>
-            <div>
-              <img
-                src="aicpa logo.png"
-                class="img-fluid w-100 my-image-logo"
-                alt="aicpa logo"
-              />
-            </div>
-          </div>
-          <div class="col text-start">
-            <h2 class="fs-2 text-dark">Scale with enterprise-grade security</h2>
-            <p class="fs-5 text-dark">
-              Ensure your company's data is completely secure and that you are
-              in compliance with the latest standards.
-            </p>
-
-            <button
-              class="btn btn-outline-secondary rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
-            >
-              Explore security
-            </button>
-          </div>
-        </div>
-  <!--  -->
-    </div>
-
-    <div class="container mt-5 mb-5">
-      <div class="align-items">
-        <h1 style="font-size: 3.125rem; font-weight: bolder">
-          Connect over 300+ <br />
-          integrations
-        </h1>
-        <p class="fs-3 mt-3 text-justify">
-          Asana connects with the enterprise tools your <br />
-          organization already uses, right out of the box.
-        </p>
-        <button
-          class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-3 mb-2 text-white mt-4 p-4"
-        >
-          See all integrations
-        </button>
-      </div>
-    </div>
-    <!-- Animation icone -->
-
-    <div
-      class="container-fluid py-5 d-flex flex-column align-items-center gap-5"
-    >
-      <!-- Animation vers la gauche -->
-      <div class="image-animaation1">
-        <!-- Logos x2 pour boucle fluide -->
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbYksf21vl893__NwLFnIIHeuZtogEjuRMw&s"
-          alt="logo"
-        />
-        <img
-          src="https://images.icon-icons.com/2157/PNG/512/windows_logo_icon_132880.png"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3RaendkWxwbnlsA8UyDPmcDbqIMQETxKYpw&s"
-          alt="logo"
-        />
-        <img
-          src="https://i0.wp.com/lgment.com/wp-content/uploads/2019/11/33-66502-33-66702-Product.jpg?fit=369%2C500&ssl=1"
-          alt="logo"
-        />
-        <img
-          src="https://img.freepik.com/premium-vector/instagram-icon_768467-672.jpg?semt=ais_hybrid&w=740"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5h4gr_K89lVml_oJKMTPow0gCA6XO-HyiQ&s"
-          alt="logo"
-        />
-        <img
-          src="https://image.made-in-china.com/2f0j00odOirQGcgMzT/Operator-Cab-Lock-Door-Lock-11224770-14727151.webp"
-          alt="logo"
-        />
-
-        <!-- Doublons -->
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbYksf21vl893__NwLFnIIHeuZtogEjuRMw&s"
-          alt="logo"
-        />
-        <img
-          src="https://images.icon-icons.com/2157/PNG/512/windows_logo_icon_132880.png"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3RaendkWxwbnlsA8UyDPmcDbqIMQETxKYpw&s"
-          alt="logo"
-        />
-        <img
-          src="https://i0.wp.com/lgment.com/wp-content/uploads/2019/11/33-66502-33-66702-Product.jpg?fit=369%2C500&ssl=1"
-          alt="logo"
-        />
-        <img
-          src="https://img.freepik.com/premium-vector/instagram-icon_768467-672.jpg?semt=ais_hybrid&w=740"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5h4gr_K89lVml_oJKMTPow0gCA6XO-HyiQ&s"
-          alt="logo"
-        />
-        <img
-          src="https://image.made-in-china.com/2f0j00odOirQGcgMzT/Operator-Cab-Lock-Door-Lock-11224770-14727151.webp"
-          alt="logo"
-        />
-      </div>
-
-      <!-- Animation vers la droite -->
-      <div class="image-animaation2">
-        <!-- Logos x2 pour boucle fluide -->
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhANiqc9SiS-5oUGJhXVIU9_inOR5I7h3lQA&s"
-          alt="logo"
-        />
-        <img
-          src="https://media.istockphoto.com/id/1224436921/vector/blue-check-mark-triangle-logo-template-illustration-design-vector-eps-10.jpg?s=612x612&w=0&k=20&c=eDopSXZMaAJmGJJBguiYoJ4faA9Zgi8I80B-LiytPvc="
-          alt="logo"
-        />
-        <img
-          src="https://images.all-free-download.com/images/graphiclarge/android_gallery_logo_6830698.jpg"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgO3lv7qEMx3lIBeGMDAYVvoV6tGCMSxF_kg&s"
-          alt="logo"
-        />
-        <img
-          src="https://t3.ftcdn.net/jpg/01/95/96/58/360_F_195965824_PfdPfG0hxzuNKY9X6oYYSOXKKOAGL4Za.jpg"
-          alt="logo"
-        />
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/8377/8377243.png"
-          alt="logo"
-        />
-
-        <!-- Doublons -->
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhANiqc9SiS-5oUGJhXVIU9_inOR5I7h3lQA&s"
-          alt="logo"
-        />
-        <img
-          src="https://media.istockphoto.com/id/1224436921/vector/blue-check-mark-triangle-logo-template-illustration-design-vector-eps-10.jpg?s=612x612&w=0&k=20&c=eDopSXZMaAJmGJJBguiYoJ4faA9Zgi8I80B-LiytPvc="
-          alt="logo"
-        />
-        <img
-          src="https://images.all-free-download.com/images/graphiclarge/android_gallery_logo_6830698.jpg"
-          alt="logo"
-        />
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgO3lv7qEMx3lIBeGMDAYVvoV6tGCMSxF_kg&s"
-          alt="logo"
-        />
-        <img
-          src="https://t3.ftcdn.net/jpg/01/95/96/58/360_F_195965824_PfdPfG0hxzuNKY9X6oYYSOXKKOAGL4Za.jpg"
-          alt="logo"
-        />
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/8377/8377243.png"
-          alt="logo"
-        />
-      </div>
-    </div>
-    <!--  -->
-
-    <div class="container mt-5">
-      <h1 style="font-weight: bolder; font-size: 4.375rem">
-        The world’s top companies trust <br />
-        Asana.
-      </h1>
-      <button
-        class="btn border-dark fs-5 text-dark rounded-5 btn-outline-light p-4 mt-3 px-5"
-        type="button"
-      >
-        See all cases studies
-      </button>
-    </div>
-
-    <!--  -->
-
-    <div
-      id="customCarousel"
-      class="carousel slide carousel-fade mt-5 mb-5"
-      data-bs-ride="carousel"
-      data-bs-interval="4000"
-    >
-      <!-- Indicateurs -->
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#customCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#customCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#customCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#customCarousel"
-          data-bs-slide-to="3"
-          aria-label="Slide 4"
-        ></button>
-      </div>
-
-      <!-- Slides -->
-      <div class="carousel-inner border border-2 border-gray rounded-4 mb-5">
-        <!-- Slide 1 -->
-        <div class="container carousel-item active">
-          <div class="row p-0">
-            <div class="col col-md-5 p-4 text-start">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
-                alt="danoe-logo"
-                style="width: 9.375rem"
-              />
-              <hr />
-              <p class="text-muted">Company Size</p>
-              <p class="fw-bold">Enterprise</p>
-              <p class="text-muted">Industry</p>
-              <p class="fw-bold">Food/Hospitality</p>
-            </div>
-            <div class="col col-md-7 p-4" style="background-color: #b0e0e6">
-              <h2 style="color: black">
-                Asana makes everything shareable, which saves us time executing
-                programs...
-              </h2>
-              <p>Simon Levinson</p>
-              <p>
-                Global Digital Manufacturing Process Innovation Manager, Danone
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div
-          class="container carousel-item border border-2 border-gray rounded-4"
-        >
-          <div class="row p-0">
-            <div class="col col-md-5 p-4 text-start">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
-                alt="danoe-logo"
-                style="width: 9.375rem"
-              />
-              <hr />
-              <p class="text-muted">Company Size</p>
-              <p class="fw-bold">Mid-Market</p>
-              <p class="text-muted">Industry</p>
-              <p class="fw-bold">
-                Retail / Fast-Moving Consumer <br />
-                Goods (FMCG)
-              </p>
-            </div>
-            <div class="col col-md-7 p-4" style="background-color: #f5cb8c">
-              <h3 style="color: black">
-                To hit our ambitious growth target, we need to move fast. But we
-                can’t do it without clear processes that remove as many blockers
-                as possible. I'm a strong believer that implementing processes,
-                like the ones we built in Asana, will help us drive success.
-              </h3>
-              <p
-                style="color: rgba(210, 105, 30, 0.543); padding-top: 0.625rem"
-              >
-                Romain Ehrhard <br />
-                CIO, KENDO
-              </p>
-              <div class="d-flex justify-content-end">
-                <button
-                  type="button"
-                  class="p-3 border-2 rounded-5 btn-outline"
-                  style="background-color: #f79708"
-                >
-                  Read Case study
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div
-          class="container carousel-item border border-2 border-gray rounded-4"
-        >
-          <div class="row p-0">
-            <div class="col col-md-5 p-4 text-start">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
-                alt="danoe-logo"
-                style="width: 9.375rem"
-              />
-              <hr />
-              <p class="text-muted">Company Size</p>
-              <p class="fw-bold">Enterprise</p>
-              <p class="text-muted">Industry</p>
-              <p class="fw-bold">Technology</p>
-            </div>
-            <div class="col col-md-7 p-4" style="background-color: #77fccd9a">
-              <h2 style="color: black">
-                Asana is our air traffic control. We have the visibility to
-                scale production and support a higher number of ad campaigns to
-                support our revenue goals.
-              </h2>
-              <p>Eugenia Contreras</p>
-              <p>Associate Manager, Spotify</p>
-              <div class="d-flex justify-content-end">
-                <button
-                  type="button"
-                  class="p-3 border-2 rounded-5 btn-outline"
-                  style="background-color: #f79708"
-                >
-                  Read Case study
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div
-          class="container carousel-item border border-2 border-gray rounded-4"
-        >
-          <div class="row p-0">
-            <div class="col col-md-5 p-4 text-start">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
-                alt="danoe-logo"
-                style="width: 9.375rem"
-              />
-              <hr />
-              <p class="text-muted">Company Size</p>
-              <p class="fw-bold">Large</p>
-              <p class="text-muted">Industry</p>
-              <p class="fw-bold">Healthcare</p>
-            </div>
-            <div
-              class="col col-md-7 p-5 d-flex justify-content-center align-items-center text-center"
-              style="background-color: #b0e0e6"
-            >
-              <h3 style="color: black">
-                Having one centralized ecosystem that brings all doers and
-                stakeholders together has really accelerated our understanding
-                of the work we do and the speed in which we do it
-              </h3>
-              <p>Steven Tai</p>
-              <p>Director, Marketing Operations, Gannett</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Flèches de navigation -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#customCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#customCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    <!-- Get started easily -->
-
-    <div
-      class="container mt-5 p-5 rounded-5 mb-5"
-      style="background-color: #343a401a; height: 100%"
-    >
-      <div
-        class="row h-100 p-md-0 d-flex mx-auto justify-content-between align-items-center p-5"
-      >
-        <div class="col-12 col-md-6 text-md-start" style="margin-top: 0">
-          <h1 class="fw-bold" style="font-size: 3.125rem">
-            Get started easily
-          </h1>
-          <p class="fs-3">
-            Tour the platform, read a few deep dives, or kickstart your work
-            management journey with the right template.
-          </p>
-        </div>
-
-        <div class="col-12 col-md-6 gap-md-5 p-md-0">
-          <div class="icone-svg-div m-5">
-            <a href="">Try the Asana demo</a>
-            <p class="text-muted">see Asana in action</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-arrow"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              />
-            </svg>
-          </div>
-          <div class="icone-svg-div m-5">
-            <a href="">Discover ressourcices</a>
-            <p class="text-muted">help articles and tutorials</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-arrow"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              />
-            </svg>
-          </div>
-
-          <div class="icone-svg-div m-5">
-            <a href="">Start with a template</a>
-            <p class="text-muted">get started a faster with a template</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-arrow"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Recognized as a leader by top analyst firms -->
-
-    <div class="container-fluid mt-5 mb-5 mx-auto py-5 h-auto pb-5 h-100">
-      <h1 class="fw-bold display-5 ms-5">
-        Recognized as a leader by top <br />
-        analyst firms
-      </h1>
-      <div
-        class="row h-100 d-flex justify-content-center align-items-center mx-auto flex-sm-culumn gap-3 mt-5 gartner-IDC-Container"
-      >
-        <div class="col-12 col-md-3">
-          <div
-            class="rounded-4 text-center d-flex justify-content-center align-items-center"
-            style="background-color: darkblue"
-          >
-            <h1 class="fw-bold text-light">Gartner</h1>
-          </div>
-
-          <p class="mt-4 fs-5">
-            A Leader in the Gartner Magic Quadrant for Collaborative Work
-            Management² two years in a row
-          </p>
-          <a href=""
-            >Learn more
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-fleche"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              /></svg
-          ></a>
-        </div>
-
-        <div class="col-12 col-md-3 gartner-section">
-          <div
-            class="rounded-4 bg-secondary d-flex justify-content-center align-items-center"
-          >
+        <div class="row justify-content-between align-items-center mt-5 mb-5">
+          <div class="col text-start ms-2">
             <img
-              src="images/assana-forrester.png"
+              src="images/Asana-cognitive-load.webp"
+              class="img-fluid"
               alt="image"
-              class="img-fluid "
             />
           </div>
-          <p class="mt-4 fs-5">
-            A Leader in the The Forrester Wave™: Collaborative Work Management
-            Tools Report³
-          </p>
-          <a href=""
-            >Learn more
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="3.125rem"
-              class="icone-fleche"
-              viewBox="0 -960 960 960"
-              width="3.125rem"
-              fill="#e3e3e3"
-            >
-              <path
-                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-              /></svg
-          ></a>
+          <div class="col col-auto">
+            <h1>Operationalize goals</h1>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Connect work to company
+                goals
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Automate workflows
+                across departments
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i> Report on progress and
+                address bottlenecks
+              </li>
+            </ul>
+            <div class="col-auto">
+              <button
+                class="btn btn-outline-dark rounded-5 fs-5 fw-bold px-4 py-2"
+              >
+                See how it works
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-3 gartner-section"">
+      </div>
+
+      <!--  -->
+      <div
+        class="container-fluid mx-auto rounded-top-4 mt-5 mb-5"
+        style="background-color: #b0e0e6; height: 150vh; padding-top: 50px"
+      >
+        <h1 class="fs-1 fw-bold text-start ms-5" style="color: darkblue">
+          What sets Asana apart
+        </h1>
+        <div
+          class="row d-flex justify-content-center align-items-center gap-3 mt-2 mb-5 mx-5"
+          style="height: 90%"
+        >
+          <div
+            class="col rounded-3 p-5"
+            style="background-color: darkblue; height: 90%"
+          >
+            <h1 class="text-light fw-bold">More clarity and accountability</h1>
+
+            <p class="text-small text-center text-white">
+              Connect strategic goals to the teams that help achieve them. See
+              progress in real time, update stakeholders, and keep the company
+              on track.
+            </p>
+            <img
+              src="data:image/png;base64,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"
+              alt=""
+            />
+            <div class="d-flex justify-content-start" style="margin-top: 40%">
+              <button
+                class="btn btn-secondary rounded-5 fs-5 p-5 fw-bold px-4 py-2 mb-2"
+              >
+                Learn about goals
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="col rounded-3 p-5"
+            style="background-color: darkblue; height: 90%"
+          >
+            <h1 class="text-light fw-bold">Amplify your impact with AI</h1>
+
+            <p class="text-small text-center text-white">
+              Work smarter and faster with AI-powered workflows that take on
+              your teams’ busywork.
+            </p>
+            <img
+              src="data:image/png;base64,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"
+              alt=""
+            />
+            <div class="d-flex justity-content-start" style="margin-top: 40%">
+              <button
+                class="btn btn-outline-success rounded-5 fs-5 fw-bold px-4 py-2 mb-2"
+              >
+                Meet Asana AI
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="container mt-5 mb-5">
+        <div class="align-items">
+          <h1 style="font-size: 3.125rem; font-weight: bolder">
+            Connect over 300+ <br />
+            integrations
+          </h1>
+          <p class="fs-3 mt-3 text-justify">
+            Asana connects with the enterprise tools your <br />
+            organization already uses, right out of the box.
+          </p>
+          <button
+            class="btn btn-dark rounded-5 fs-5 fw-bold px-4 py-3 mb-2 text-white mt-4 p-4"
+          >
+            See all integrations
+          </button>
+        </div>
+      </div>
+      <!-- Animation icone -->
+
+      <div
+        class="container-fluid py-5 d-flex flex-column align-items-center gap-5"
+      >
+        <!-- Animation vers la gauche -->
+        <div class="image-animaation1">
+          <!-- Logos x2 pour boucle fluide -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbYksf21vl893__NwLFnIIHeuZtogEjuRMw&s"
+            alt="logo"
+          />
+          <img
+            src="https://images.icon-icons.com/2157/PNG/512/windows_logo_icon_132880.png"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3RaendkWxwbnlsA8UyDPmcDbqIMQETxKYpw&s"
+            alt="logo"
+          />
+          <img
+            src="https://i0.wp.com/lgment.com/wp-content/uploads/2019/11/33-66502-33-66702-Product.jpg?fit=369%2C500&ssl=1"
+            alt="logo"
+          />
+          <img
+            src="https://img.freepik.com/premium-vector/instagram-icon_768467-672.jpg?semt=ais_hybrid&w=740"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5h4gr_K89lVml_oJKMTPow0gCA6XO-HyiQ&s"
+            alt="logo"
+          />
+          <img
+            src="https://image.made-in-china.com/2f0j00odOirQGcgMzT/Operator-Cab-Lock-Door-Lock-11224770-14727151.webp"
+            alt="logo"
+          />
+
+          <!-- Doublons -->
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbYksf21vl893__NwLFnIIHeuZtogEjuRMw&s"
+            alt="logo"
+          />
+          <img
+            src="https://images.icon-icons.com/2157/PNG/512/windows_logo_icon_132880.png"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3RaendkWxwbnlsA8UyDPmcDbqIMQETxKYpw&s"
+            alt="logo"
+          />
+          <img
+            src="https://i0.wp.com/lgment.com/wp-content/uploads/2019/11/33-66502-33-66702-Product.jpg?fit=369%2C500&ssl=1"
+            alt="logo"
+          />
+          <img
+            src="https://img.freepik.com/premium-vector/instagram-icon_768467-672.jpg?semt=ais_hybrid&w=740"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5h4gr_K89lVml_oJKMTPow0gCA6XO-HyiQ&s"
+            alt="logo"
+          />
+          <img
+            src="https://image.made-in-china.com/2f0j00odOirQGcgMzT/Operator-Cab-Lock-Door-Lock-11224770-14727151.webp"
+            alt="logo"
+          />
+        </div>
+
+        <!-- Animation vers la droite -->
+        <div class="image-animaation2">
+          <!-- Logos x2 pour boucle fluide -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhANiqc9SiS-5oUGJhXVIU9_inOR5I7h3lQA&s"
+            alt="logo"
+          />
+          <img
+            src="https://media.istockphoto.com/id/1224436921/vector/blue-check-mark-triangle-logo-template-illustration-design-vector-eps-10.jpg?s=612x612&w=0&k=20&c=eDopSXZMaAJmGJJBguiYoJ4faA9Zgi8I80B-LiytPvc="
+            alt="logo"
+          />
+          <img
+            src="https://images.all-free-download.com/images/graphiclarge/android_gallery_logo_6830698.jpg"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgO3lv7qEMx3lIBeGMDAYVvoV6tGCMSxF_kg&s"
+            alt="logo"
+          />
+          <img
+            src="https://t3.ftcdn.net/jpg/01/95/96/58/360_F_195965824_PfdPfG0hxzuNKY9X6oYYSOXKKOAGL4Za.jpg"
+            alt="logo"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/8377/8377243.png"
+            alt="logo"
+          />
+
+          <!-- Doublons -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/160rem-Salesforce.com_logo.svg.png"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhANiqc9SiS-5oUGJhXVIU9_inOR5I7h3lQA&s"
+            alt="logo"
+          />
+          <img
+            src="https://media.istockphoto.com/id/1224436921/vector/blue-check-mark-triangle-logo-template-illustration-design-vector-eps-10.jpg?s=612x612&w=0&k=20&c=eDopSXZMaAJmGJJBguiYoJ4faA9Zgi8I80B-LiytPvc="
+            alt="logo"
+          />
+          <img
+            src="https://images.all-free-download.com/images/graphiclarge/android_gallery_logo_6830698.jpg"
+            alt="logo"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgO3lv7qEMx3lIBeGMDAYVvoV6tGCMSxF_kg&s"
+            alt="logo"
+          />
+          <img
+            src="https://t3.ftcdn.net/jpg/01/95/96/58/360_F_195965824_PfdPfG0hxzuNKY9X6oYYSOXKKOAGL4Za.jpg"
+            alt="logo"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/8377/8377243.png"
+            alt="logo"
+          />
+        </div>
+      </div>
+      <!--  -->
+
+      <div class="container mt-5">
+        <h1 style="font-weight: bolder; font-size: 4.375rem">
+          The world’s top companies trust <br />
+          Asana.
+        </h1>
+        <button
+          class="btn border-dark fs-5 text-dark rounded-5 btn-outline-light p-4 mt-3 px-5"
+          type="button"
+        >
+          See all cases studies
+        </button>
+      </div>
+
+      <!--  -->
+
+      <div
+        id="customCarousel"
+        class="carousel slide carousel-fade mt-5 mb-5"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+      >
+        <!-- Indicateurs -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#customCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#customCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#customCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#customCarousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner border border-2 border-gray rounded-4 mb-5">
+          <!-- Slide 1 -->
+          <div class="container carousel-item active">
+            <div class="row p-0">
+              <div class="col col-md-5 p-4 text-start">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
+                  alt="danoe-logo"
+                  style="width: 9.375rem"
+                />
+                <hr />
+                <p class="text-muted">Company Size</p>
+                <p class="fw-bold">Enterprise</p>
+                <p class="text-muted">Industry</p>
+                <p class="fw-bold">Food/Hospitality</p>
+              </div>
+              <div class="col col-md-7 p-4" style="background-color: #b0e0e6">
+                <h2 style="color: black">
+                  Asana makes everything shareable, which saves us time
+                  executing programs...
+                </h2>
+                <p>Simon Levinson</p>
+                <p>
+                  Global Digital Manufacturing Process Innovation Manager,
+                  Danone
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="container carousel-item border border-2 border-gray rounded-4"
+          >
+            <div class="row p-0">
+              <div class="col col-md-5 p-4 text-start">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
+                  alt="danoe-logo"
+                  style="width: 9.375rem"
+                />
+                <hr />
+                <p class="text-muted">Company Size</p>
+                <p class="fw-bold">Mid-Market</p>
+                <p class="text-muted">Industry</p>
+                <p class="fw-bold">
+                  Retail / Fast-Moving Consumer <br />
+                  Goods (FMCG)
+                </p>
+              </div>
+              <div class="col col-md-7 p-4" style="background-color: #f5cb8c">
+                <h3 style="color: black">
+                  To hit our ambitious growth target, we need to move fast. But
+                  we can’t do it without clear processes that remove as many
+                  blockers as possible. I'm a strong believer that implementing
+                  processes, like the ones we built in Asana, will help us drive
+                  success.
+                </h3>
+                <p
+                  style="
+                    color: rgba(210, 105, 30, 0.543);
+                    padding-top: 0.625rem;
+                  "
+                >
+                  Romain Ehrhard <br />
+                  CIO, KENDO
+                </p>
+                <div class="d-flex justify-content-end">
+                  <button
+                    type="button"
+                    class="p-3 border-2 rounded-5 btn-outline"
+                    style="background-color: #f79708"
+                  >
+                    Read Case study
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div
+            class="container carousel-item border border-2 border-gray rounded-4"
+          >
+            <div class="row p-0">
+              <div class="col col-md-5 p-4 text-start">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
+                  alt="danoe-logo"
+                  style="width: 9.375rem"
+                />
+                <hr />
+                <p class="text-muted">Company Size</p>
+                <p class="fw-bold">Enterprise</p>
+                <p class="text-muted">Industry</p>
+                <p class="fw-bold">Technology</p>
+              </div>
+              <div class="col col-md-7 p-4" style="background-color: #77fccd9a">
+                <h2 style="color: black">
+                  Asana is our air traffic control. We have the visibility to
+                  scale production and support a higher number of ad campaigns
+                  to support our revenue goals.
+                </h2>
+                <p>Eugenia Contreras</p>
+                <p>Associate Manager, Spotify</p>
+                <div class="d-flex justify-content-end">
+                  <button
+                    type="button"
+                    class="p-3 border-2 rounded-5 btn-outline"
+                    style="background-color: #f79708"
+                  >
+                    Read Case study
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div
+            class="container carousel-item border border-2 border-gray rounded-4"
+          >
+            <div class="row p-0">
+              <div class="col col-md-5 p-4 text-start">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/f/f4/DANONE_LOGO_HORIZONTAL.png"
+                  alt="danoe-logo"
+                  style="width: 9.375rem"
+                />
+                <hr />
+                <p class="text-muted">Company Size</p>
+                <p class="fw-bold">Large</p>
+                <p class="text-muted">Industry</p>
+                <p class="fw-bold">Healthcare</p>
+              </div>
+              <div
+                class="col col-md-7 p-5 d-flex justify-content-center align-items-center text-center"
+                style="background-color: #b0e0e6"
+              >
+                <h3 style="color: black">
+                  Having one centralized ecosystem that brings all doers and
+                  stakeholders together has really accelerated our understanding
+                  of the work we do and the speed in which we do it
+                </h3>
+                <p>Steven Tai</p>
+                <p>Director, Marketing Operations, Gannett</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flèches de navigation -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#customCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#customCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Get started easily -->
+
+      <div
+        class="container mt-5 p-5 rounded-5 mb-5"
+        style="background-color: #343a401a; height: 100%"
+      >
+        <div
+          class="row h-100 p-md-0 d-flex mx-auto justify-content-between align-items-center p-5"
+        >
+          <div class="col-12 col-md-6 text-md-start" style="margin-top: 0">
+            <h1 class="fw-bold" style="font-size: 3.125rem">
+              Get started easily
+            </h1>
+            <p class="fs-3">
+              Tour the platform, read a few deep dives, or kickstart your work
+              management journey with the right template.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-6 gap-md-5 p-md-0">
+            <div class="icone-svg-div m-5">
+              <a href="">Try the Asana demo</a>
+              <p class="text-muted">see Asana in action</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="3.125rem"
+                class="icone-arrow"
+                viewBox="0 -960 960 960"
+                width="3.125rem"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                />
+              </svg>
+            </div>
+            <div class="icone-svg-div m-5">
+              <a href="">Discover ressourcices</a>
+              <p class="text-muted">help articles and tutorials</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="3.125rem"
+                class="icone-arrow"
+                viewBox="0 -960 960 960"
+                width="3.125rem"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                />
+              </svg>
+            </div>
+
+            <div class="icone-svg-div m-5">
+              <a href="">Start with a template</a>
+              <p class="text-muted">get started a faster with a template</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="3.125rem"
+                class="icone-arrow"
+                viewBox="0 -960 960 960"
+                width="3.125rem"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recognized as a leader by top analyst firms -->
+
+      <div class="container-fluid mt-5 mb-5 mx-auto py-5 h-auto pb-5 h-100">
+        <h1 class="fw-bold display-5 ms-5">
+          Recognized as a leader by top <br />
+          analyst firms
+        </h1>
+        <div
+          class="row h-100 d-flex justify-content-center align-items-center mx-auto flex-sm-culumn gap-3 mt-5 gartner-IDC-Container"
+        >
+          <div class="col-12 col-md-3">
+            <div
+              class="rounded-4 text-center d-flex justify-content-center align-items-center"
+              style="background-color: darkblue"
+            >
+              <h1 class="fw-bold text-light">Gartner</h1>
+            </div>
+
+            <p class="mt-4 fs-5">
+              A Leader in the Gartner Magic Quadrant for Collaborative Work
+              Management² two years in a row
+            </p>
+            <a href=""
+              >Learn more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="3.125rem"
+                class="icone-fleche"
+                viewBox="0 -960 960 960"
+                width="3.125rem"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                /></svg
+            ></a>
+          </div>
+
+          <div class="col-12 col-md-3 gartner-section">
+            <div
+              class="rounded-4 bg-secondary d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="images/assana-forrester.png"
+                alt="image"
+                class="img-fluid"
+              />
+            </div>
+            <p class="mt-4 fs-5">
+              A Leader in the The Forrester Wave™: Collaborative Work Management
+              Tools Report³
+            </p>
+            <a href=""
+              >Learn more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="3.125rem"
+                class="icone-fleche"
+                viewBox="0 -960 960 960"
+                width="3.125rem"
+                fill="#e3e3e3"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                /></svg
+            ></a>
+          </div>
+          <div class="col-12 col-md-3 gartner-section"">
           <div
             class="d-flex justify-content-center align-items-center rounded-4"
             style="background-color: #b0e0e6"
@@ -1290,31 +1540,28 @@
           <li>Accurate as of December 2023, includes free and paid users.</li>
           <li>
             See the
-            <span style="text-decoration: underline"
-              >2024 Gartner® Magic Quadrant™ for Collaborative Work Management
+            <span style="text-decoration: underline">
+              2024 Gartner® Magic Quadrant™ for Collaborative Work Management
               (CWM).
-              </span
-            >
+            </span>
             GARTNER is a registered trademark and service mark of Gartner, Inc.
             and/or its affiliates in the U.S. and internationally. MAGIC
             QUADRANT and PEER INSIGHTS are registered trademarks. The GARTNER
-            PEER INSIGHTS CUSTOMERS’ CHOICE badge is used herein with
+            PEER INSIGHTS CUSTOMERS' CHOICE badge is used herein with
             permission. All rights reserved.
           </li>
           <li>
             See
-            <span style="text-decoration: underline"
-              >The Forrester Wave™: Collaborative Work Management Tools, Q4 2022
+            <span style="text-decoration: underline">
+              The Forrester Wave™: Collaborative Work Management Tools, Q4 2022
               report.
-              </span
-            >
+            </span>
           </li>
           <li>
             Forrester and Forrester Wave are trademarks of Forrester Research,
             Inc. Information reflects judgment at the time and is subject to
             change.
           </li>
-
           <li>
             IDC MarketScape: Worldwide Collaborative Work Management 2023–2024
             Vendor Assessment — Uniting Teams, Data, and AI for Flexible Work,
@@ -1323,17 +1570,15 @@
         </ul>
         <hr class="text-danger mt3 mb-3" />
       </div>
+
       <!-- grid du footer-->
       <div
         class="row mt-5 p-3 d-flex justify-content-center flex-md-nowrap gap-2 footer-link"
       >
         <div class="col col-md-2 text-center">
           <a href="">
-            <img
-              src="images/asanalogo (2).png"
-              alt="asana logo"
-              class="w-25"
-          /></a>
+            <img src="images/asanalogo (2).png" alt="asana logo" class="w-25" />
+          </a>
         </div>
 
         <div class="col-md-2 text-center">
@@ -1423,8 +1668,7 @@
       </div>
     </section>
 
-    <!-- copirypt -->
-
+    <!-- copyright -->
     <div
       class="row d-flex text-center justify-content-center align-items-center mt-0 mx-auto flex-md-nowrap footer-copirypt"
     >
@@ -1432,7 +1676,7 @@
         <p>&copy; 2025 Asana, Inc. |</p>
       </div>
       <div class="col-12 col-md-2">
-        <p><i class="bi bi-globe"></i>English</p>
+        <p><i class="bi bi-globe"></i> English</p>
       </div>
       <div class="col-12 col-md-3">
         <span><i class="bi bi-twitter-x"></i></span>
@@ -1442,14 +1686,14 @@
         <span><i class="bi bi-linkedin"></i></span>
       </div>
       <div class="col-12 col-md-2">
-        <a href="" title="Terms">Terms &</a>
+        <a href="" title="Terms">Terms</a> &
         <a href="" title="Privacy">Privacy</a>
       </div>
       <div class="col-12 col-md-3">
         <a href="">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
-            title="Donwload the asana android app"
+            title="Download the asana android app"
             class="img-fluid w-25"
             alt="playstore"
           />
@@ -1458,7 +1702,7 @@
         <a href="">
           <img
             src="https://cdn.freebiesupply.com/logos/large/2x/download-on-the-app-store-apple-logo-black-and-white.png"
-            title="Donwload the asana ios app"
+            title="Download the asana ios app"
             class="w-25 img-fluid"
             alt="app store"
           />
