@@ -453,8 +453,9 @@
             }
             
             .navbar-nav .dropdown:hover .dropdown-menu {
-                display: none;
+                display: none;   
             }
+            
         }
 
       .dropdown-toggle::after{
