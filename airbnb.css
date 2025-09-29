@@ -568,3 +568,81 @@ footer h5 {
 .icone:hover{
 background-color: #7e7c7c;
 }
+
+
+
+
+/* ============================== */
+/* ANIMATIONS PROFESSIONNELLES POUR LES IMAGES */
+/* ============================== */
+
+/* Animation d'apparition progressive */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation de zoom léger au survol */
+@keyframes gentleZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+/* Animation de brillance sur les images */
+@keyframes shine {
+  0% {
+    background-position: -100px;
+  }
+  40%, 100% {
+    background-position: 300px;
+  }
+}
+
+/* Animation de flottement améliorée */
+@keyframes floatPro {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-5px) rotate(0.5deg);
+  }
+  66% {
+    transform: translateY(3px) rotate(-0.5deg);
+  }
+}
+
+/* Animation de pulsation subtile */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
+}
+
+/* Animation de transition de couleur */
+@keyframes colorShift {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    filter: hue-rotate(5deg) brightness(1.05);
+  }
+  100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+}
+
